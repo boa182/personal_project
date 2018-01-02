@@ -1,0 +1,187 @@
+@charset "UTF-8";
+.pb35 {
+    padding-bottom: 35px;
+}
+
+.main{
+    position:relative;
+    color: #5E5E5E;
+    .form_bg{
+        position: absolute;
+        left: 16px;
+        top:2px;
+        display: block;
+        width: 560px;
+        height: 363px;
+        background: url(../css/img/l_bg_02.png);
+    }
+    .form_right{
+        width: 100%;
+        height: 449px;
+        border: 1px solid #E6E6E6;
+        border-top:2px solid #0083ce ;
+        box-shadow: -1px 1px 10px #EFEFEF,-1px 10px 10px #EFEFEF;
+        padding-top: 8px;
+        #commonLogin{
+            display: none;
+        }
+        .tab_con{
+                margin-left: 560px;
+                padding: 0 30px;
+                .lg_title{
+                    font-size: 16px;
+                    font: 20px "microsoft yahei";
+                    margin: 13px 0;
+                    span{
+                        font-size: 12px;
+                        margin-top: 7px;
+                       
+                    }
+                }
+                .btn{
+                    width: 350px;
+                }
+               
+        }
+        .tab-title{
+            height: 36px;
+            margin-left:560px;
+            padding: 10px 0;
+            padding-top:2px ;
+            border-bottom: 1px solid#E2E2E2;
+            .item{
+                float: left;
+                position: relative;
+                width: 50%;
+                text-align: center;
+                font-size:14px ;
+                line-height: 25px;
+                a{
+                    display: block;
+                    position: relative;
+                    margin: 0 30px;
+                    color:#333;
+                    &.active{
+                        color:#2c9ee0;
+                    }
+                    &.active:before{
+                        display: block;
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        left: 0;
+                        bottom: -10px;
+                        background-color: #2C9EE0;
+                    }
+                }
+            }
+            li:before{
+                display: block;
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 100%;
+                top: 0;
+                right: 0;
+                background-color: #E2E2E2;
+            }
+        }
+    }
+}
+.a_yhd, .a_zfb, .a_qq, .a_sina, .a_wlt, .a_wy, .a_wx {
+    background:url(../css/img/img_zhifu.png) no-repeat;
+    display: block;
+    float: left;
+    height: 39px;
+    margin-right: 18px;
+    width: 39px;
+    border: none;
+}
+.reg_row{
+    min-height: 65px;
+    width: 340px;
+    position: relative;
+    .fr{
+        a{
+            color:#333;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: #0083CE;
+        }
+    
+    }
+    a.a_wx{
+        background-position: -294px 0;
+    }
+    a.a_wx:hover{
+        background-position: -294px -52px;
+    }
+    a.a_zfb{
+        background-position: -48px 0;
+    }
+    a.a_zfb:hover{
+        background-position: -48px -52px;
+    }
+    a.a_qq{
+        background-position: -95px 0;
+    }
+    a.a_qq:hover{
+        background-position: -95px -52px;
+    }
+}
+.tellnumber, .u_ps, .u_name, .u_email, .i_empty, .i_true, .i_false{
+    background: url(../css/img/regest.png) no-repeat;
+}
+.u_name{
+    background-position: 8px -114px;
+}
+.u_ps{
+    background-position: 8px -149px;
+}
+.form-control{
+    display: block;
+    width: 286px;
+    height: 36px;
+    padding: 6px 12px 6px 40px;
+    font-size: 14px;
+    line-height: 1.42851429;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid #E6E6E6;
+}
+.form-control:focus{
+        border-color: #0083ce;
+        color: #333;
+        outline: 0;
+}
+.txt.phone {
+    width: 270px;
+    padding-left: 42px;
+    background: url(../css/img/logo_phone.png) 18px center no-repeat;
+    border: 1px solid #E6E6E6;
+    font-size: 14px;
+    height: 36px;
+}
+ .txt.check_num {
+    width: 165px;
+    height: 40px;
+    padding-left: 40px;
+    background: url(../css/img/logo_key.png) 18px center no-repeat;
+    border: 1px solid #e6e6e6;
+    margin-right: 10px;
+}
+.check_btn {
+    display: block;
+    width: 120px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid #C6E1F0;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    color: #5CBAF0;
+    background-color: #F1FAFF;
+    vertical-align: middle;
+}

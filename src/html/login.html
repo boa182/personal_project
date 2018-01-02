@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="../lib/jquery-ui/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+	</head>
+
+	<body>
+		<div class="head container">
+			<a href="../index.html">
+				<img src="../css/img/yao_logo.png" />
+			</a>
+		</div>
+		<div class="main container clearfix">
+			<i class="form_bg"></i>
+			<div class="form_right clearfix">
+				<ul class="tab-title">
+					<li class="item">
+						<a>普通登录</a>
+					</li>
+					<li class="item">
+						<a>手机快速登录</a>
+					</li>
+				</ul>
+				<div id="commonLogin" class="tab_con">
+					<h2 class="lg_title">
+						<span class="fr">
+							还不是1药网会员？
+							<a href="register.html">免费注册</a>
+						</span>
+						Hi，欢迎登录！
+					</h2>
+					<form autocomplete="off">
+						<!--<div class="reg_form reg_form_step2"  id="reg_form_div1">-->
+						<div class="reg_row">
+							<!-- 用户名 -->
+							<input name="ecuserCustomer.id" id="userName" autocomplete="off" placeholder="邮箱/手机号/用户名" class="form-control u_name" tabindex="1" type="text">
+							<i id="pas_empty" class="i_empty" style="display:none;">不能为空</i>
+							<span id="accountDesc" class="error"></span>
+						</div>
+						<div class="reg_row">
+							<!-- 密码 -->
+							<input id="userPass" name="ecuserCustomer.password" autocomplete="off" placeholder="登录密码" class="form-control u_ps" tabindex="2" type="password">
+							<span class="fr"><a>忘记密码？</a></span>
+							<span id="pwd_desc" class="error"></span>
+						</div>
+						<div id="vcd_div" class="reg_row verify_box" style="">
+							<input name="validCode" placeholder="验证码" type="text">
+							<i id="vcd_tatus"></i>
+
+							<a class="verifylink" id="changecode" tabindex="-1" href="javascript:void(0);">换一张</a>
+							<span id="vcd_desc" class="error"></span>
+						</div>
+						<div class="">
+							<!-- 1药网协议-->
+							<label class="checkbox"><input value="1" name="rememberPwd" id="rememberPwd" tabindex="-1" type="checkbox">
+                        <span class="two_week">两周内免登录</span>
+                    </label>
+							<button type="button" id="btnSubmit" class="btn btn-primary">登录</button><br>
+							<span id="login_desc" class="error"></span>
+						</div>
+
+						<div class="reg_row hz_login fl">
+							<p>使用合作伙伴账号登录：</p>
+							<a class="first a_wx"></a>
+							<a class="a_zfb"></a>
+							<a class="a_qq"></a>
+
+						</div>
+					</form>
+					
+				</div>
+				<div id="quickLogin" class="tab_con">
+					<h2 class="lg_title">
+						<span class="fr">
+							还不是1药网会员？
+							<a href="register.html">免费注册</a>
+						</span>
+						Hi，欢迎登录！
+					</h2>
+					<div class="form_group pb35 clearfix">
+						<label class="lbs fl">
+							<input class="txt phone" id="phoneNum4QuickLogin" placeholder="请输入您的手机号码" value="" type="text">
+							<i id="phoneNum4QuickLogin_empty" class="i_empty" style="display:none;">不能为空</i>
+							<span id="phoneNum4QuickLoginDesc" class="error" style="display: none;">手机号格式不对</span>
+				
+						</label>
+					</div>
+					<div class="form_group pb35 clearfix">
+						<label class="lbs fl mr10">
+							<input class="txt check_num" id="smsCode4QuickLogin" placeholder="请输入短信验证码" value="" type="text">
+							<span id="smsCode4QuickLoginDesc" class="error"></span>
+						</label>
+						<label class="lbs fl ">
+
+						<button type="button" id="getSmsCodeBtn" class="check_btn" style="cursor: pointer">获取短信验证码</button>
+						</label>
+					
+					</div>
+					<div class="">
+               			<button type="button" id="btnSubmit4QuickLogin" class="btn btn-primary" onclick="quickLogin();">登录</button><br>
+               			<span id="quickLogin_desc" class="error"></span>
+        			</div>
+        			<div class="reg_row hz_login fl">
+							<p>使用合作伙伴账号登录：</p>
+							<a class="first a_wx"></a>
+							<a class="a_zfb"></a>
+							<a class="a_qq"></a>
+
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../lib/jquery-ui/jquery-ui.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/login.js"></script>
+	</body>
+
+</html>

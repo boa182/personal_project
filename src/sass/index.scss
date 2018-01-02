@@ -1,0 +1,85 @@
+/*头部样式*/
+#head{
+    background: #f1f1f1;
+    height: 36px;
+    width: 100%;
+    .container{
+        ul.fr{
+            width: 490px;
+            font-size: 12px;
+            color: #5E5E5E;
+            .menu{
+                float: left;
+                display: inline;
+                padding: 0 10px;
+                background: url(http://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
+                background-position: right -178px;
+                .menu_hd{
+                    z-index: 10002;
+                    position: relative;
+                    padding: 0;
+                    height: 36px;
+                    line-height: 36px;
+                    a{
+                        color:#5e5e5e;
+                        
+                    }
+                }
+                .tellnumber{
+                    overflow: hidden;
+                    float: left;
+                    font-size: 12px;
+                    color: #c7a774;
+                    font-weight: 700;
+                    font-family: tahoma;
+                    line-height: 36px;
+                }
+            }
+        }
+        ul.fl{
+            .menu{
+                line-height: 36px;
+                position: absolute;
+                color: #746E6E;
+                padding-left:5px ;
+                span:nth-child(2){
+                    padding-left: 8px;
+                    font-weight: bold;
+                }
+                .hd_provinceList{
+                    position: absolute;
+                    top: 36px;
+                    left: -1px;
+                    width: 280px;
+                    border: 1px solid #E5E5E5;
+                    background: #fff;
+                    color: #333;
+                    font-weight: 400;
+                    cursor: default;
+                    padding: 5px 0;
+                    border-top:none;
+                    display: none;
+                    li{
+                        padding-left: 10px;
+                        line-height: 22px;
+                        color: #a5a5a5;
+                        font-weight: 700;
+                        float: none;
+                        a{
+                            margin: 0 4px;
+                            padding: 1px 2px;
+                            font-size: 12px;
+                            color: #5E5E5E;
+                        }
+                    }
+                }
+            }
+            .menu:hover{
+                background: #fff;
+                .hd_provinceList{
+                    display: block;
+                }
+            }
+        }
+    }
+}
