@@ -1,13 +1,38 @@
-;(function($){
-	//wrap的传参
-	(function(){
-		var $wrap = $('#warp1');
-		var $a = $wrap.find('a');
-		$a.on('click',function(){
-			location.href = 'html/detalist.html';
-			
-		})
-	})();
+require.config({
+	paths:{
+		'jquery':'../lib/jquery-3.2.1',
+		'carousel':'../lib/ft-carousel.min',
+		'common':'common'
+	},
+	shim:{
+		carousel:['jquery']
+	}
+});
+
+require(['jquery','carousel','common'],function($,slided,com){
+	
+
+//	首页传参的传参
+//	  (function(){
+//		var $wrap = $('#warp1');
+//		var $a = $wrap.find('a');
+//		$a.on('click',function(){
+//			location.href = 'html/datalist.html';
+//			
+//		})
+//	})();
+	 
+	 //时钟走动
+	 (function(){
+	 	var $clock_m = $('.clock-m');
+	 	var deg = 0;
+	 	setInterval(function(){
+	 		deg++;
+	 		$clock_m[0].style.transform = 'rotateZ('+deg+'deg)'
+	 	},100)
+	 	
+	 })();
+	 
 	//aside的圆圈跳动
 	(function(){
 		var $cirle = $('.aside_bottom .cirle');
@@ -25,6 +50,18 @@
 	//大轮播图
 	(function(){
 		$('#carousel_big').FtCarousel();
+	})();
+	//nav2的动画hover
+	(function(){
+		$('.nav_2').on('mouseover','li',function(){
+			$(this).animate({
+				left:10
+			});
+		}).on('mouseleave','li',function(){
+			$(this).animate({
+				left:0
+			});
+		})
 	})();
 	//头部的hover
 	(function(){
@@ -62,4 +99,6 @@
 			
 		});
 	})();
-})(jQuery);
+
+	
+})

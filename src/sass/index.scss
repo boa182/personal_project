@@ -261,32 +261,32 @@
             padding-left: 12px;
             font-size: 14px;
             position: relative;
-            .nav_2{
-                position: absolute;
-                top:48px;
-                left:0px;
-                background-color: #314249;
-                li{
-                    height: 40px;
-                    width: 168px;
-                    padding-left: 8px;
-                    background-color: #314249;
-                    font-weight: 200;
-                    font-size: 12px;
-                    i{
-                        display: inline-block;
-                        font-size: 22px; 
-                        padding-right: 10px;
-                    }
-                }
-                li:hover{
-                    margin-left: 10px;
-                    background-color: #fff;
-                    color: #314249;
-                    width: 158px;
-                    
-                }
-            }
+//          .nav_2{
+//              position: absolute;
+//              top:48px;
+//              left:0px;
+//              background-color: #314249;
+//              li{
+//                  height: 40px;
+//                  width: 168px;
+//                  padding-left: 8px;
+//                  background-color: #314249;
+//                  font-weight: 200;
+//                  font-size: 12px;
+//                  i{
+//                      display: inline-block;
+//                      font-size: 22px; 
+//                      padding-right: 10px;
+//                  }
+//              }
+//              li:hover{
+//                  margin-left: 10px;
+//                  background-color: #fff;
+//                  color: #314249;
+//                  width: 158px;
+//                  
+//              }
+//          }
             
         }
         
@@ -298,8 +298,37 @@
     position: relative;
     border-top: 2px solid #D1BA91;
     .container{
-        padding-left:183px;
+//      padding-left:183px;
+.nav_2 {
+    position: absolute;
+    top: 0;
+    left: 94px;
+    background-color: #314249;
+    li {
+        color: #fff;
+        height: 40px;
+        width: 168px;
+        padding-left: 8px;
+        background-color: #314249;
+        font-weight: 200;
+        font-size: 12px;
+        i {
+            display: inline-block;
+            font-size: 22px;
+            padding-right: 10px;
+        }
+    }
+    li:hover {
+        position: relative;
+        left: 0;
+//      margin-left: 10px;
+        background-color: #fff;
+        color: #314249;
+        
+    }
+}
         .example{
+            margin-left:168px;
             width: 750px;
             height: 400px;
             
@@ -407,5 +436,64 @@
     }  
 }
 /*banner样式*/
+#warp1{
+    padding: 10px 0;
+    .clockBox{
+        position: relative;
+        width: 168px;
+        height: 150px;
+        float: left;
+        background: url(http://s.maiyaole.com/images/201306/img/clock01.png) no-repeat center;
+        .clock{
+            position: absolute;
+            left: 63px;
+            top:40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            .clock-h{
+                    position: absolute;
+                    top: 2px;
+                    left: 17px;
+                    height: 18px;
+                    width: 5px;
+                    background: url(http://s.maiyaole.com/images/201306/img/clock_h.png) no-repeat;
+                    transform: rotate(10deg);
+                    -webkit-transform-origin: 2.5px 16.5px;
+                    -moz-transform-origin: 2.5px 16.5px;
+                    transform-origin: 2.5px 16.5px;
+            }
+            .clock-m{
+                position: absolute;
+                left: -1px;
+                top: 15px;
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                transform-origin: 20px 2.5px;
+                
+                
+            }
+        }
+        .clock:before{
+            content: "";
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            width: 7px;
+            height: 7px;
+            border-radius:50%;
+            background-color: #fff;
+            animation: rol 1s;
+        }
+    }
+    a{
+        display: inline-block;
+        width: 245px;
+        height: 150px;
+    }
+    
+}
 
 /*wrap样式，该死的闹钟*/
