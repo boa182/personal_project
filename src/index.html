@@ -12,7 +12,7 @@
 	<body>
 		<div id="head">
 			<div class="container clearfix">
-				<ul class="fl">
+				<ul class="fl clearfix">
 					<li class="menu">
 						<span>送货至</span>&nbsp;<span id="user_province">广东</span>
 						<i class="iconfont icon-arrow2-bottom"></i>
@@ -84,7 +84,7 @@
 				<ul class="fr">
 					<li class="menu">
 						<div class="menu_hd">
-							<a href="html/login.html">请登录</a>
+							<a class="red" href="html/login.html">请登录</a>
 							<a href="html/register.html">注册</a>
 						</div>
 					</li>
@@ -94,9 +94,16 @@
 						</div>
 					</li>
 					<li class="menu">
-						<div class="menu_hd">
-							<a href="html/login.html">我的1药网</a>
-							<i class="iconfont icon-arrow2-bottom"></i>
+						<div class="menu_hd myyaowang">
+							<a href="html/login.html" id="myyaowang">我的1药网
+								<i class="iconfont icon-arrow2-bottom"></i>
+							</a>
+							<ul class="menu_bd_panel">
+								<li><a target="_self" href="http://my.111.com.cn/ucenter/queryCoupon.action" rel="nofollow">我的优惠券</a></li>
+								<li><a target="_self" href="http://my.111.com.cn/ucenter/myFavorite.action" rel="nofollow">我的收藏夹</a></li>
+								<li><a target="_self" href="http://my.111.com.cn/ucenter/reviewList.action" rel="nofollow">商品评价</a></li>
+								<li><a title="网上药店私人定制：会员专享" target="_self" href="http://my.111.com.cn/ucenter/privateTag.action" rel="nofollow">我的私人定制</a></li>
+							</ul>
 						</div>
 					</li>
 					<li class="menu">
@@ -109,20 +116,176 @@
 							<div class="tellnumber">400-007-0958</div>
 						</div>
 					</li>
-					<li class="menu">
-						<div class="menu_hd">
-							<i></i>
-							<span>手机app</span>
+					<li class="menu menu_last">
+						<div class="menu_hd PhoneApp">
+							<a id="phoneApp">
+								<em></em>
+								<span>手机app</span>								
+							</a>
+							<ul class="menu_bd_app">
+								<li>
+									<p>1药网客户端</p>
+									<p class="red">APP专享更优惠</p>
+									
+								</li>
+								<li>
+									<p>1药网客户端</p>
+									<p class="red">APP专享更优惠</p>
+								</li>
+							</ul>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div id="search"></div>
-		<div id="nav"></div>
-		<div id="banner"></div>
+		<div id="search">
+			<div class="container">
+				<h1>
+					<a href="index.html"></a>
+				</h1>
+				<div class="search fl">
+					<input type="text" placeholder="请输入你寻找的药物"/>
+					<button id="search_btn"></button>
+					<ul class="fl">
+						<li>商家大回馈</li>
+						<li>亮甲</li>
+						<li>开胃茶</li>
+						<li class="red">优乐美1</li>
+						<li>优乐美2</li>
+						<li>优乐美3</li>
+					</ul>
+				</div>
+				<div class="fr buyCarLink">
+					<img src="http://s.maiyaole.com/images/201306/images/2DCodenew2.jpg" width="100"  alt="1药网App二维码">
+					<div class="fr">
+						<a href="html/buycar.html"></a>
+						<i class="iconfont icon-gouwuche"></i>
+						<span>购物车</span>
+						<i class="iconfont icon-jiantou"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<div class="container">
+				<ul class="nav_1">
+					<li class="fw">所以商品分类
+						<ul class="nav_2 fl">
+							<li><i class="iconfont icon-shenghuo-yaodian"></i>中西药品</li>
+							<li><i class="iconfont icon-icon-test"></i>滋补药品</li>
+							<li><i class="iconfont icon-iconcopy"></i>维生素钙</li>
+							<li><i class="iconfont icon-yanjing"></i>隐形眼镜</li>
+							<li><i class="iconfont icon-20150611111806280easyiconnet"></i>医疗器械、家电</li>
+							<li><i class="iconfont icon-ximiannai"></i>药妆个护</li>
+							<li><i class="iconfont icon-iconanquantao"></i>成人用品</li>
+							<li><i class="iconfont icon-yinger"></i>母婴专品</li>
+							<li><i class="iconfont icon-rencan"></i>参茸花茶、休闲零食</li>
+							<li><i class="iconfont icon-wendu"></i>体检、口腔诊疗</li>
+						</ul>
+					</li>
+					<li class="red">1实惠</li>
+					<li>家庭常备药</li>
+					<li>乙肝</li>
+					<li class="red">滋补养生</li>
+					<li>阳痿早泄</li>
+					<li>高血压</li>
+					<li>儿童医药馆</li>
+					<li>中药抓药</li>
+					<li class="purple"><i class="global"></i>商家海外购</li>
+					<li>掌上1药网<i class="iconfont icon-arrow2-bottom"></i></li>
+				</ul>
+			</div>
+		</div>
+		<div id="banner">
+			<div class="container">
+				<div class="example fl">
+					<div class="ft-carousel" id="carousel_big">
+						<ul class="carousel-inner">
+							<li class="carousel-item"><img src="images/b1.jpg"/></li>
+							<li class="carousel-item"><img src="images/b2.jpg" /></li>
+							<li class="carousel-item"><img src="images/b3.jpg" /></li>
+							<li class="carousel-item"><img src="images/b4.jpg" /></li>
+							<li class="carousel-item"><img src="images/b5.jpg" /></li>
+							<li class="carousel-item"><img src="images/b6.jpg" /></li>
+							<li class="carousel-item"><img src="images/b7.jpg"/></li>
+							<li class="carousel-item"><img src="images/b8.jpg" /></li>
+						</ul>
+					</div>
+				</div>
+					<div class="aside fr">
+						<div class="title">
+							<span class="special">在线咨询</span>
+							<span>医生问诊</span>
+						</div> 
+						<ul>
+							<li>男科></li>
+							<li>妇科></li>
+							<li>糖尿病></li>
+							<li>心脑血管></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+							<li>肝胆科></li>
+						</ul>
+						<div>
+							<img src="css/img/consult_banner.jpg"/>
+						</div>
+						<div class="title">
+							<span class="special">
+								优质服务
+							</span>
+							<span>公告</span>
+						</div>
+						<div class="aside_bottom">
+							<a>
+								<span class="cirle">正</span>
+								<p>正品保证</p>
+							</a>
+							<a>
+								<span class="cirle">授</span>
+								<p>品牌授权</p>
+							</a>
+							<a>
+								<span class="cirle">监</span>
+								<p>药监认证</p>
+							</a>
+							<a>
+								<span class="cirle">免</span>
+								<p>满79包邮</p>
+							</a>
+						</div>
+					</div>
+			
+			</div>
+			
+		</div>
 		<div id="update"></div>
-		<div class="warp"></div>
+		<div id="warp1">
+			<div class="container">
+				<div class="clockBox">
+					
+				</div>
+				<a>
+					<img src="images/w1.jpg"/>
+				</a>
+				<a>
+					<img src="images/w2.jpg"/>
+				</a>
+				<a>
+					<img src="images/w3.jpg"/>
+				</a>
+				<a>
+					<img src="images/w4.jpg"/>
+				</a>
+				
+			</div>
+		</div>
 		<div id="main">
 
 		</div>
@@ -135,6 +298,9 @@
 				<div class="footbox"></div>
 			</div>
 		</div>
+		<script src="lib/jquery-3.2.1.js"></script>
+		<script src='lib/ft-carousel.min.js'></script>
+		<script type="text/javascript" src="js/index.js"></script>
 	</body>
 
 </html>
