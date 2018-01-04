@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['jquery', 'carousel', 'common'], function($, slided, com) {
+	require(['jquery', 'carousel', 'common','base'], function($, slided, com,base) {
 	
 		//	首页传参的传参
 		//	  (function(){
@@ -10,33 +10,10 @@ require(['config'],function(){
 		//			
 		//		})
 		//	})();
+		//头部的hover
+		base.headHover();
 		//返顶效果
-		(function(){
-			window.onscroll = function(){
-				//当前可视窗口的高度
-				var h = $(window).height();
-				var t = 508+$(document).scrollTop();
-				if(t>h){
-					$('.f_top').fadeIn();
-			
-				}else{
-					$('.f_top').fadeOut();
-				}
-			
-			};
-			$('.f_top').on('click',function(){
-				var timer2 = setInterval(function(){
-					var scrolly = $(window).scrollTop();
-					var speed = scrolly/10;
-					scrolly-=speed;
-					if(speed <= 0||scrolly ===0){
-						clearInterval(timer2);
-					}
-					$(window).scrollTop(scrolly);
-				},30)
-			});
-			
-		})();
+		base.backTop();
 		
 		//底部的tab标签切换
 		(function(){
@@ -107,45 +84,8 @@ require(['config'],function(){
 				}, 300);
 			})
 		})();
-		//头部的hover
-		(function() {
-			var $myyaowang = $('.myyaowang');
-			var $phoneApp = $('#phoneApp');
-			var $menu_bd_panel = $('.menu_bd_panel')
-			var $menu_bd_app = $('.menu_bd_app');
-			var $user_province = $('#user_province');
-			$user_province.on('mouseover', function() {
-				$(this).siblings('i').removeClass('icon-arrow2-bottom').addClass('icon-jiantou-copy');
-	
-			}).on('mouseleave', function() {
-				$(this).siblings('i').addClass('icon-arrow2-bottom').removeClass("icon-jiantou-copy");
-	
-			});
-			$user_province.siblings().on('mouseenter', function() {
-				$(this).siblings('i').removeClass('icon-arrow2-bottom').addClass('icon-jiantou-copy');
-	
-			}).on('mouseleave', function() {
-				$(this).siblings('i').addClass('icon-arrow2-bottom').removeClass("icon-jiantou-copy");
-			});
-			
-			
-			$myyaowang.on('mouseenter', 'a',function() {
-				$(this).addClass('down').find('i').removeClass('icon-arrow2-bottom').addClass('icon-jiantou-copy');
-				$menu_bd_panel.show();
-	
-			}).on('mouseleave',function() {
-				$(this).find('a').removeClass('down').find('i').addClass('icon-arrow2-bottom').removeClass("icon-jiantou-copy").find('ul').hide();
-				$menu_bd_panel.hide();
+
 		
-			});
-	
-			$phoneApp.on('mouseenter', function() {
-				$phoneApp.addClass('down');
-			}).on('mouseleave', function() {
-				$phoneApp.removeClass('down');
-	
-			});
-		})();
 		
 	})
 })

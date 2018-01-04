@@ -57,6 +57,17 @@ s,i,em{font-style:normal;text-decoration:none;}
 .hide {
     display:none;
 }
+.red {
+	color: #e54948 !important;
+}
+
+.fw {
+	font-weight: 800;
+}
+
+.purple {
+	color: #7F47F0;
+}
 .font12{ font-size: 12px;}
 .font14{ font-size: 14px;}
 .font16{ font-size: 16px;}
@@ -107,6 +118,221 @@ s,i,em{font-style:normal;text-decoration:none;}
 .icon-gouwuche:before { content: "\e501"; }
 /*公共部分*/
 /*头部导航开始*/
+#head {
+	position: relative;
+	z-index: 1002;
+	background: #f1f1f1;
+	height: 36px;
+	width: 100%;
+}
+/*左边的导航*/
+#head .container ul.fl .menu {
+	line-height: 36px;
+	position: absolute;
+	color: #746E6E;
+	padding-left: 5px;
+	font-size: 12px;
+}
+#head li.active{
+	background: #f1f1f1;
+}
+#head .container ul.fl .menu span:nth-child(2) {
+	padding-left: 8px;
+	font-weight: bold;
+}
+#head .container ul.fl .menu .hd_provinceList {
+	position: absolute;
+	top: 36px;
+	left: -1px;
+	width: 280px;
+	border: 1px solid #E5E5E5;
+	background: #fff;
+	color: #333;
+	font-weight: 400;
+	cursor: default;
+	padding: 5px 0;
+	border-top: none;
+	display: none;
+}
+#head .container ul.fl .menu .hd_provinceList li {
+	padding-left: 10px;
+	line-height: 22px;
+	color: #a5a5a5;
+	font-weight: 700;
+	float: none;
+	background-color: #fff;
+}
+
+#head .container ul.fl .menu .hd_provinceList li a {
+	margin: 0 4px;
+	padding: 1px 2px;
+
+	color: #5E5E5E;
+}
+#head .container ul.fl .menu .hd_provinceList li a:hover {
+	color: #0083CE;
+}
+
+#head .container ul.fl .menu:hover {
+	background: #fff;
+	padding-left: 5px;
+}
+
+#head .container ul.fl .menu:hover .hd_provinceList {
+	display: block;
+}
+/*右边的导航*/
+#head .container ul.fr {
+	width: 498px;
+	font-size: 12px;
+	color: #5E5E5E;
+}
+#head .container ul.fr .menu {
+	float: left;
+	display: inline;
+	padding: 0 8px;
+	background: url(http://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
+	background-position: right -178px;
+}
+#head .container ul.fr .menu .menu_hd {
+	z-index: 10002;
+	position: relative;
+	padding: 0;
+	height: 36px;
+	line-height: 36px;
+}
+#head .container ul.fr .mdyw:hover .menu_hd{
+	background-color: #fff;
+	padding: 0 5px;
+	margin: 0 -5px;
+}
+#head .container ul.fr .menu .tellnumber {
+	overflow: hidden;
+	float: left;
+	font-size: 12px;
+	color: #c7a774;
+	font-weight: 700;
+	font-family: tahoma;
+	line-height: 36px;
+}
+#head .container ul.fr .menu .menu_hd a {
+	color: #5e5e5e;
+	position: relative;
+}
+#head .container ul.fr .menu a:hover {
+	color: #0083CE;
+}
+#head .container ul.fr .menu .menu_hd a em {
+	display: inline-block;
+	background: url(http://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0;
+	background-position: right -108px;
+	width: 9px;
+	height: 16px;
+	margin-top: 8px;
+	margin-right: 7px;
+	overflow: hidden;
+}
+#head .container ul.fr .menu .menu_hd .menu_bd_panel {
+	display: none;
+	border: 1px solid #E5E5E5;
+	border-top: none;
+	position: absolute;
+	top: 34px;
+	left: 0;
+	width: 79px;
+	background-color: #fff;
+	text-align: center;
+}
+#head .container ul.fr .menu:hover .menu_hd .menu_bd_panel{
+	display: block;
+}
+#head .container ul.fr  .menu_hd .menu_bd_app {
+	display: none;
+	border: 1px solid #E5E5E5;
+	border-top: none;
+	position: absolute;
+	top: 34px;
+	left: -90px;
+}
+#head .container ul.fr .menu:hover .menu_hd .menu_bd_app{
+	display: block;
+}
+#head .container ul.fr .menu .menu_hd .menu_bd_app li {
+	width: 185px;
+	height: 83px;
+	padding-left: 85px;
+	background: url(../css/img/common_sprite.png) no-repeat right 0;
+	background-position: -88px -224px;
+	background-color: #fff;
+}
+/*search的样式*/
+#search .container {
+	padding-top: 26px;
+}
+
+#search .container h1 {
+	float: left;
+	width: 118px;
+	height: 64px;
+	margin-right: 80px;
+	background: url(../css/img/logo_01.png) no-repeat center;
+}
+
+#search .container .search {
+	position: relative;
+	float: left;
+	width: 524px;
+	margin-left: 85px;
+}
+
+#search .container .search input {
+	padding-left: 5px;
+	margin: 10px;
+	width: 450px;
+	height: 44px;
+	border: 1px solid #C7A872;
+	outline: 0 none;
+}
+
+#search .container .search #search_btn {
+	height: 46px;
+	width: 82px;
+	background-color: #fff;
+	border: 1px solid #C7A872;
+	position: absolute;
+	top: 10px;
+	left: 428px;
+	background-image: url(http://s.maiyaole.com/images/201306/images/search.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#search .container .search li {
+	float: left;
+	margin-left: 15px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+#search .container .buyCarLink {
+	position: relative;
+}
+
+#search .container .buyCarLink i {
+	font-size: 20px;
+}
+
+#search .container .buyCarLink div {
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 4px;
+	border: 1px solid #ddd;
+	height: 40px;
+	width: 110px;
+	line-height: 38px;
+	padding-left: 10px;
+}
 
 
+/*search部分的样式*/
 /*尾部部导航开始*/

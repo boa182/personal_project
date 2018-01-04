@@ -6,11 +6,13 @@ require.config({
 	paths:{
 		'jquery':'../lib/jquery-3.2.1',
 		'carousel':'../lib/ft-carousel.min',
-		'common':'common'
+		'common':'common',
+		'base':'base'
 	},
 	shim:{
 		// 设置依赖
 		carousel:['jquery'],
-		common:['jquery']
+		common:['jquery'],
+		base:['jquery']
 	}
 });
