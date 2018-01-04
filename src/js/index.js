@@ -14,7 +14,27 @@ require(['config'],function(){
 		base.headHover();
 		//返顶效果
 		base.backTop();
+		//nav2的动画hover
+		base.nav2();
+		//圆圈跳动的动画
+		base.cirle();
 		
+		//导航跳转
+		(function(){
+			var $nav1 = $('#nav');
+			$nav1.on('click','li',function(){
+				location.href = './../html/list.html';
+				console.log(this);
+				
+			});
+			var $nav2 = $('.nav_2');
+			$nav2.on('click', 'li', function() {
+				location.href = './../html/list.html';
+				console.log(this);
+			
+			});
+			
+		})();
 		//底部的tab标签切换
 		(function(){
 			var $linkBox = $('.linkBox');
@@ -43,47 +63,15 @@ require(['config'],function(){
 	
 		})();
 	
-		//圆圈跳动的动画
-		(function() {
-			var $cirle = $('.aside_bottom .cirle');
-			$('#commitC').on('mouseenter','li',function(){
-				$(this).animate({
-					top:'-20px'
-				},100,function(){
-					$(this).animate({
-						top: 0,
-					},30)
-				})
-			})
-			
-			$cirle.on('mouseenter', function() {
-				$(this).animate({
-					top: '-5px',
-	
-				}, 100, function() {
-					$(this).animate({
-						top: 0,
-					})
-				})
-			})
-		})();
+
+		
 		//大小轮播图
 		(function() {
 			$('#carousel_big').FtCarousel();
 			$('.smallCarousel').FtCarousel();
 		})();
-		//nav2的动画hover
-		(function() {
-			$('.nav_2').on('mouseover', 'li', function() {
-				$(this).animate({
-					left: 10
-				}, 300);
-			}).on('mouseleave', 'li', function() {
-				$(this).animate({
-					left: 0
-				}, 300);
-			})
-		})();
+
+		
 
 		
 		

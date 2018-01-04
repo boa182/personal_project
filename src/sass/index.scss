@@ -63,6 +63,7 @@
 #nav{
     .nav_1{
         li{
+
             float: left;  
             height: 48px;
             line-height: 48px;
@@ -103,7 +104,7 @@
 .nav_2 {
     position: absolute;
     top: 0;
-    left: 94px;
+    left: 14px;
     background-color: #314249;
     li {
         color: #fff;
@@ -125,6 +126,7 @@
 //      margin-left: 10px;
         background-color: #fff;
         color: #314249;
+        width: 100%;
         
     }
 }

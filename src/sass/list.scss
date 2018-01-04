@@ -1,3 +1,70 @@
+#nav {
+    color: #505050;
+    .nav_1 {
+        li {
+            
+            float: left;
+            height: 48px;
+            line-height: 48px;
+            padding: 0 10px;
+            cursor: pointer;
+            .global {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                float: left;
+                margin-top: 13px;
+                margin-right: 5px;
+                background: url(http://s.maiyaole.com/images/201306/images/haitao_ico.gif) no-repeat 0 0;
+            }
+        }
+        >li:nth-child(1) {
+            color: #fff;
+            width: 168px;
+            background-color: #193239;
+            padding-left: 12px;
+            font-size: 14px;
+            position: relative;
+        }
+        .fw:hover .nav_2{
+            display: block;
+        }
+    }
+    .nav_2 {
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        background-color: #314249;
+        li {
+            color: #fff;
+            height: 40px;
+            width: 168px;
+            padding-left: 8px;
+            background-color: #314249;
+            font-weight: 200;
+            font-size: 12px;
+            i {
+                display: inline-block;
+                font-size: 22px;
+                padding-right: 10px;
+            }
+        }
+        li:hover {
+            position: relative;
+            left: 0;
+            //      margin-left: 10px;
+            background-color: #fff;
+            color: #314249;
+            width: 100%;
+        }
+    }
+    
+}
+
+
+/*nav的样式*/
+/*右边浮动盒子的样式*/
 #float_r_box {
     position: fixed;
     right: 28px;

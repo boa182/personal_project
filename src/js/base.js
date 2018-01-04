@@ -2,6 +2,7 @@ define(['jquery','common'],function($,com){
 	return{
 		headHover:function(){
 			var $menu = $('.menu');
+			
 			$menu.on('mouseenter',function(){
 				$(this).find('i').removeClass('icon-arrow2-bottom').addClass('icon-jiantou-copy');
 				
@@ -13,7 +14,13 @@ define(['jquery','common'],function($,com){
 				$(this).addClass('active').siblings().removeClass('active');
 			
 			});
-			
+			var $head = $('#head');
+			$head.hover(function(){
+				this.style.zIndex = '102';
+			},function(){
+				this.style.zIndex = '0';
+				
+			});
 		},
 		//返顶效果
 		backTop:function(){
@@ -42,5 +49,59 @@ define(['jquery','common'],function($,com){
 			});
 			
 		},
+		nav2:function(){
+			//nav2的动画hover
+			(function() {
+				$('#nav').hover(function(){
+					this.style.zIndex = '10000002';
+					$('.nav_2')[0].style.zIndex = '10000002';
+				},function(){
+					this.style.zIndex = '0';
+					$('.nav_2')[0].style.zIndex = '0';
+				});
+//				$('.nav_2').hover(function(){
+//					this.style.zIndex = '10000002';
+//				},function(){
+//					this.style.zIndex = '0';
+//				});
+//				
+				$('.nav_2').on('mouseover', 'li', function() {
+					$(this).animate({
+						left: 10
+					}, 300);
+				}).on('mouseleave', 'li', function() {
+					$(this).animate({
+						left: 0
+					}, 300);
+				});
+			})();
+		},
+		cirle:function(){
+			//圆圈跳动的动画
+			(function() {
+				var $cirle = $('.aside_bottom .cirle');
+				$('#commitC').on('mouseenter', 'li', function() {
+					$(this).animate({
+						top: '-20px'
+					}, 100, function() {
+						$(this).animate({
+							top: 0,
+						}, 30)
+					})
+				})
+			
+				$cirle.on('mouseenter', function() {
+					$(this).animate({
+						top: '-5px',
+			
+					}, 100, function() {
+						$(this).animate({
+							top: 0,
+						})
+					})
+				})
+			})();
+		},
+		
 	}
 })

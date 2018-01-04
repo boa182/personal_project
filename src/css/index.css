@@ -80,7 +80,7 @@
   #banner .container .nav_2 {
     position: absolute;
     top: 0;
-    left: 94px;
+    left: 14px;
     background-color: #314249; }
     #banner .container .nav_2 li {
       color: #fff;
@@ -98,7 +98,8 @@
       position: relative;
       left: 0;
       background-color: #fff;
-      color: #314249; }
+      color: #314249;
+      width: 100%; }
   #banner .container .example {
     margin-left: 168px;
     width: 750px;
