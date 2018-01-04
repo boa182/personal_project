@@ -647,8 +647,120 @@
   margin: 28px 10px 0 4px;
   float: left;
   display: inline; }
+  #foot dl a {
+    color: #999; }
 
 #foot .first_dl {
   padding-left: 40px; }
 
 /*foot部分的样式*/
+#gray_box {
+  padding-top: 30px;
+  line-height: 24px;
+  text-align: center;
+  color: #5E5E5E; }
+  #gray_box p {
+    padding: 0 6px; }
+    #gray_box p a {
+      margin: 0 4px;
+      color: #5E5E5E; }
+  #gray_box .grayImg {
+    margin: 5px; }
+  #gray_box .grayImg2 {
+    padding: 20px 0;
+    margin-bottom: 10px; }
+  #gray_box .ta_center {
+    text-align: center;
+    padding: 15px 0 0; }
+
+/***************************************************************************************/
+#float_r_box {
+  position: fixed;
+  right: 28px;
+  top: 130px;
+  bottom: 10px;
+  z-index: 100;
+  width: 52px;
+  height: 256px; }
+  #float_r_box a {
+    overflow: hidden;
+    display: inline-block;
+    zoom: 1;
+    width: 52px;
+    height: 52px;
+    float: left;
+    text-indent: -9999px;
+    background: url(http://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218) no-repeat right 0; }
+  #float_r_box .f_home {
+    background-position: 0 -622px; }
+  #float_r_box .f_wei {
+    background-position: 0 -674px;
+    height: 51px;
+    line-height: 52px;
+    font-weight: bold;
+    color: #e72519;
+    text-align: center;
+    width: 52px;
+    position: relative;
+    text-indent: 0; }
+    #float_r_box .f_wei i {
+      position: absolute;
+      color: #fff;
+      right: 11px;
+      top: 8px;
+      height: 12px;
+      width: auto;
+      min-width: 12px;
+      background: red;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 2px; }
+  #float_r_box .f_wei:hover {
+    background-color: none;
+    background-position: -52px -674px;
+    text-indent: -999px;
+    font-size: 14px;
+    color: #fff; }
+    #float_r_box .f_wei:hover i {
+      display: none; }
+  #float_r_box .f_back {
+    background-position: 0 -777px;
+    height: 50px; }
+  #float_r_box .f_top {
+    background-position: 0 -827px;
+    height: 51px; }
+  #float_r_box .f_back:hover {
+    background: red;
+    color: #fff;
+    text-indent: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0;
+    text-align: center;
+    text-decoration: none; }
+  #float_r_box .f_top:hover {
+    background: red;
+    color: #fff;
+    text-indent: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0;
+    text-align: center;
+    text-decoration: none; }
+  #float_r_box .f_home:hover {
+    background: red;
+    color: #fff;
+    text-indent: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0;
+    text-align: center;
+    text-decoration: none; }
+
+/*******************************************浮动盒子的样式**********************************************/

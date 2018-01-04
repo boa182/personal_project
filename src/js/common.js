@@ -1,426 +1,491 @@
-/**
- * [得到某个范围内的随机数]
- * @param  {Number} min [最小值]
- * @param  {Number} max [最大值]
- * @return {Number}     [返回值]
- */
-function randomNumber(min,max){
-	return parseInt(Math.random()*(max-min+1)) + min;//0:得到一个最小数min,1:得到一个最大值max
-}
-function randomNL(num){
-    var res = '';
-    var arr1 = ['0','1','2','3','4','5','6','7','8','9','q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
-    for(i=0;i<num;i++){
-        var a = randomNumber(0,arr1.length-1);
-        res +=arr1[a]; 
-    }
-    return res;
-}
-// 如果封装没有思路，先使用
-// randomNumber(10,20);//得到一个随机整数
-// randomNumber('abc',20);//得到一个随机整数
+define(['jquery'],function($){
+	return{
+		/**
+		 * [生成随机颜色]
+		 * @return {String} [(255,255,0)]
+		 */
+		randomColor:function (){
+			var r,g,b;
+			r=this.randomNum(0,255);
+			g=this.randomNum(0,255);
+			b=this.randomNum(0,255);
+			var rgb = "rgb("+r+','+g+','+b+')';
+			return rgb;
+		},
 
 
-// createTable(10,6);//得到一个10行6列的表格
 
-/**
- * [得到一个随机颜色]
- * @return {String} [返回rgb格式颜色]
- */
-function randomColor(){
-	// 生成rgb颜色
-	// var r = parseInt(Math.random()*256);
-	var r = randomNumber(0,255);
-	var g = randomNumber(0,255);
-	var b = randomNumber(0,255);
-
-	return 'rgb('+ r +','+ g +','+ b +')';
-}
-// randomColor();//得到一个随机颜色'rgb(255,0,0)'
-
-/**
- * [得到一个16进制的随机颜色]
- * #cccccc;#58bc58
- * @return {String} [返回16进制的随机颜色]
- */
-function getColor(){
-	// 写出所有颜色可能的字符
-	var str = '0123456789abcdef';
-
-	// 创建一个变量，用于保存随机生成的颜色
-	var res = '#';
-
-	// 循环6次，每次随机获取一个字符
-	for(var i=0;i<6;i++){
-		// 生成随机索引值
-		// var idx = Math.random()*str.length;
-		var idx = randomNumber(0,str.length-1);
-
-		res += str.charAt(idx);
-	}
-
-	// 返回随机颜色
-	return res;
-}
-
-// getColor();//#58bc58
+		/**
+		 * [生成随机整数]
+		 * @param  {[Num]} min [最小值]
+		 * @param  {Num} max [最大值]
+		 * @return {Num]}     [10000]
+		 */
+		randomNum:function (min,max){
+			var num = Math.floor(Math.random()*(max-min+1))+min;
+			return num;
+		},
 
 
-// 	封装一个删除非元素节点的函数
-// 	兼容版本浏览（IE8-）
-var element = {
-	/**
-	 * [获取元素节点]
-	 * @param  {Nodes} nodes [节点]
-	 * @return {Array}       [返回所有元素节点]
-	 */
-	get:function(nodes){
-		// 创建空数组，用于存放结果
-		var res = [];
-		for(var i=0;i<nodes.length;i++){
-			if(nodes[i].nodeType === 1){
-				res.push(nodes[i]);
-			}
-		}
 
-		// 返回结果
-		return res;
-	},
-	// 获取所有子元素
-	children:function(node){
-
-	},
-	// 下一个兄弟元素
-	next:function(node){
-
-	},
-	// 上一个兄弟元素
-	prev:function(node){
-
-	},
-	// 父元素
-	parent:function(node){
-
-	},
-	// 兼容ie8-
-	getByClassName:function(className){
-		// return documebnt.getElementsByClassName(className)
-	}
-}
-
-// element.get(nodes);//[element,element]
-// element.children(document.body);
-// element.next(baidu);//
-// element.getByClassName()
-
-/**
- * [获取css样式,兼容ie8-]
- * @param  {Element} ele [要获取样式的元素]
- * @param  {String} key [css属性]
- * @return {String}     [css属性值]
- */
-function getCss(ele,key){
-	//判断思路：判断用户使用的浏览器是否支持getComputedStyle
-	if(window.getComputedStyle){
-		return getComputedStyle(ele)[key]
-	}else if(ele.currentStyle){
-		return ele.currentStyle[key]
-	}else{
-		// 如果以上都不支持，直接返回内联样式
-		return ele.style[key];
-	}
-}
-// getCss(box,'font-size');//16px
-
-/**
- * [事件绑定函数，支持冒泡/捕获]
- * @param  {Node} ele     [需绑定事件的节点]
- * @param  {String} type    [事件类型]
- * @param  {Function} handler [事件处理函数]
- * @param  {Boolean} capture [是否捕获]
- */
-function bind(ele,type,handler,capture){
-	// 判断是否支持addEventListener
-	if(ele.addEventListener){
-		ele.addEventListener(type,handler,capture);
-	}else if(ele.attachEvent){
-		ele.attachEvent('on'+type,handler);
-	}else{
-		ele['on'+type] = handler
-	}
-}
-
-// bind(box,'click',function(){},true)
-
-/*
-	cookie操作
-		* 增
-		* 删
-		* 查
-		* 改
- */
-var cookie = {
-	/**
-	 * [读取cookie]
-	 * @param  {String} name [cookie名]
-	 * @return {String}      [返回name对应的cookie值]
-	 */
-	get:function(name){
-		var cookies = document.cookie;
-		var res = '';
-		if(cookies.length){
-			cookies = cookies.split('; ');//[]
-
-			// 循环优化方式
-			for(var i=0,len=cookies.length;i<len;i++){
-				// 拆分cookie名、cookie值
-				var arr = cookies[i].split('=');
-				if(arr[0] === name){
-					res = arr[1];
+		/**
+		 * [去除数组中的重复项]
+		 * @param  {Array} arr [原数组]
+		 * @return {Array}     [返回一个新数组]
+		 */
+		noRepeat:function (arr){
+			var obj = {},arr1 = [];
+				for(i=0;i<arr.length;i++){
+					if(obj[arr[i]]===undefined){
+						obj[arr[i]]=1;
+						arr1.push(arr[i]);					
+					}				
 				}
-			}
-		}
+			return arr1;
+		},
 
-		return res;
-	},
-	/**
-	 * [添加cookie]
-	 * @param {String} name    [cookie名]
-	 * @param {String} val     [cookie值]
-	 * @param {[Date]} expires [有效期]
-	 * @param {[String]} path    [路径]
-	 */
-	set:function(name,val,expires,path){
-		var str = name+'='+value;
 
-		// 传入有效期时
-		if(expire){
-			str += ';expires=' + expires.toUTCString();
-		}
 
-		if(path){
-			str += ';path=' + path;
-		}
-
-		document.cookie = str;
-	},
-	/**
-	 * [删除cookie]
-	 * @param  {String} name [cookie名]
-	 */
-	remove:function(name){
-		var now = new Date();
-		now.setDate(now.getDate()-10);
-		// document.cookie = name + '=null;expires=' + now.toUTCString();
-		this.set(name,'null',now);
-	}
-}
-
-// cookie.get('carlistabcdefg');//[{}]
-// cookie.set('carlist',JSON.stingify(carlist),now);//[{}]
-// cookie.remove('carlist');
-
-function animate(ele,opt,callback){
-	var timerQty = 0;
-	for(var attr in opt){
-		// 记录动画数量
-		timerQty++;
-
-		//createTimer(attr);
-		(function(attr){
-			// 以属性名创建定时器名字
-			var timerName = attr + 'timer';
-
-			// 清除之前的定时器,放置多个定时器作用于同一个元素
-			clearInterval(ele[timerName]);
-
-			// 目标值
-			var target = opt[attr];
-
-			// 创建定时器
-			ele[timerName] = setInterval(function(){
-				// 获取当前值
-				var current = getComputedStyle(ele)[attr];
-
-				// 提取单位
-				var unit = current.match(/\d([a-z]*)$/);
-				unit = unit ? unit[1] : '';
-
-				// 提取数字
-				current = parseFloat(current);
-
-				// 计算缓冲速度
-				var speed = (target - current)/10;
-
-				//判断属性是否为opacity
-				if(attr === 'opacity'){
-					speed = speed>0 ? 0.05 : -0.05;
+		/**
+		 * [统计数组中每一项出现的次数,有去重和统计出现次数的功能]
+		 * @param  {Array} arr [需要统计的数组]
+		 * @return {Object}     [统计结果,obj中的属性为JSON字符串，提取时要用JSON.parse方法]
+		 */
+		 arrObject:function(arr){
+			var obj = {};
+			for(i=0;i<=arr.length-1;i++){
+				if(!obj[JSON.stringify(arr[i])]){
+					obj[JSON.stringify(arr[i])] = 1;
 				}else{
-					speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);
+					obj[JSON.stringify(arr[i])]++;
 				}
+			}
+			return obj;
+		},
 
-				// 到达目标值/清除定时器
-				if(current === target){
-					clearInterval(ele[timerName]);
-					current = target - speed;
+		/**
+		 * [数组中的对象去重，并且统计对象出现的次数qty,写进数组的对象中]
+		 * @author jhua 2017-05-18
+		 * @param  {[Array]} arr [需要处理的数组]
+		 * @return {[Array]}     [返回一个新数组，去重，统计并添加qty。]
+		 */
+		addQty:function (arr){
+			var obj = {};
+			var arr1=[];
+			for(i=0;i<=arr.length-1;i++){
+				if(!obj[JSON.stringify(arr[i])]){
+					obj[JSON.stringify(arr[i])] = 1;
+				}else{
+					obj[JSON.stringify(arr[i])]++;
+				}
+			}
+			for(var attr in obj){
+				arr1.push(JSON.parse(attr));
+				arr1[arr1.length-1].qty = obj[attr];
+			}
+			return arr1;
+		},
 
-					// 数量减1
-					timerQty--;
 
-					// 执行回调函数
-					// 最后一个动画执行完成后才执行回调函数
-					if(typeof callback === 'function' && timerQty===0){
-						callback();
+		/**
+		 * [生成随机小写字母数字组合的验证码]
+		 * @param  {Num} num [生成验证码的长度]
+		 * @return {String}     [验证码]
+		 */
+		randomNL:function (num){
+			var res = '';
+			var arr1 = ['0','1','2','3','4','5','6','7','8','9','q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
+			for(i=0;i<num;i++){
+				var a = this.randomNum(0,arr1.length-1);
+				res +=arr1[a]; 
+			}
+			return res;
+		},
+
+
+
+		/**
+		 * [获取元素样式的方法，兼容ie8-]
+		 * @param  {Element} ele  [要获取样式的节点]
+		 * @param  {String} attr [css属性]
+		 * @return {String}      [返回css属性对应的样式]
+		 */
+		getStyle:function (ele,attr){
+			// 保存最终样式
+			var res;
+			if(window.getComputedStyle){
+				res = getComputedStyle(ele)[attr];
+			}else if(ele.currentStyle){
+				res = ele.currentStyle[attr];
+			}else{
+				res = ele.style[attr];
+			}
+
+			return res;
+		},
+		// var box = document.getElementById('box')
+		// getStyle(box,'background-color')
+
+
+
+
+		/**
+		 * [给元素添加事件，兼容IE8以下浏览器]
+		 * @param {Node} 	 ele     [需要绑定事件的元素]
+		 * @param {String} 	 type    [事件类型]
+		 * @param {Function} handler [事件处理函数]
+		 * @param {Boolean}  capture [是否捕获]
+		 */
+		addEvent:function (ele,type,handler,capture){
+			// 判断是否支持事件监听
+			// 标准浏览器
+			if(ele.addEventListener){
+				ele.addEventListener(type,handler,capture);
+			}
+
+			// IE8-
+			else if(ele.attachEvent){
+				ele.attachEvent('on' + type,handler);
+			}
+
+			// 传统绑定事件方式
+			else{
+				ele['on' + type] = handler;
+			}
+		},
+		// addEvent(box,'click',function(){},true)
+
+
+
+		//cookie操作
+		//写入，读取，删除
+
+		/**
+		 * [写入和修改（同名修改内容）cookie]
+		 * @param  {[String]} name    [cookie名]
+		 * @param  {[String]} value   [cookie值]
+		 * @param  {[Date]} expires [cookie过期时间]
+		 * @param  {[String]} path    [cookie保存路径]
+		 */
+		setCookie:function (name,value,expires,path){
+			var str_cookie = name+'='+value;
+
+			if(expires){
+				str_cookie +=';expires='+expires;
+			}
+
+			if(path){
+				str_cookie +=';path='+path;
+			}
+
+			document.cookie = str_cookie;
+		},
+
+		/**
+		 * [删除cookie]
+		 * @param  {[string]} name [要删除的cookie的name]
+		 * @param  {[string]} path [要删除‘/’目录下的cookie就就上‘/’，否则删除的是自己的目录下的cookie]
+		 */
+		removeCookie:function (name,path){
+			var now = new Date();
+			now.setDate(now.getDate()-5);
+			if(path){	
+				this.setCookie(name,null,now,path)
+			}else if(!path){
+				this.setCookie(name,null,now)
+			}
+			
+		},
+
+
+		/**
+		 * [获取cookie值]
+		 * @param  {[String]} name [需要获取的cookie名]
+		 * @return {[String]}      [返回对应cookie的值]
+		 */
+		getCookie:function (name){
+			var cookies = document.cookie;
+			if(!cookies){
+				return '';
+			}
+
+			var res = '';
+			var arr = cookies.split('; ');
+			arr.forEach(function(item){
+				var temp = item.split('=');
+				if(temp[0] === name){
+					res = temp[1];
+				}
+			});
+
+			return res;
+		},
+
+
+		/**
+		 * [缓冲动画函数]
+		 * @param  {[Node]}   Node     [要绑定动画的节点]
+		 * @param  {[Object]}   obj    [要改变的属性与属性值的目标值,用对象保存{width:200,opcity:0.8,'font-size':20}]
+		 * @param  {Function} callback [回调函数，用于链式动画, function(){animate(Node,obj)}  ]
+		 */
+		animate:function (Node,obj,callback){
+			var timerLen = 0;
+			for(var attr in obj){
+				// 用于链式动画，统计前面动画个数
+				timerLen++
+				createTimer(attr);
+			}
+			
+			function createTimer(attr){
+				var target = obj[attr];
+
+
+				//根据节点和属性改名，每个节点的属性都有自己专属的label,这样清除定时器时就不会乱。
+				var timerName = attr + 'timer';
+
+
+				// 每次设置定时器时先清除该节点该属性的定时器，避免多个定时器 作用在同一属性下。
+				clearInterval(Node[timerName])
+
+
+				// 设置该属性该节点的定时器
+				Node[timerName]=setInterval(function(){
+
+
+					// 每次执行都获取当前该属性的属性值,注意有单位
+					var current =this.getStyle(Node,attr);
+
+
+					// 提取单位，用于后面拼接字符串
+					var arr = current.match(/[a-z]+$/i);
+
+					// 判断没单位的属性返回空字符串
+					var unit = arr ? arr[0] : '';
+
+					// 提取当前属性的数值
+					var current = parseFloat(current);
+
+					// 根据目标属性值和当前值，设置速度的缓冲
+					var speed =(target-current)/10;
+
+					// 把速度设置为整数，避免最后速度太小时，属性值改变太慢。
+					// 考虑速度可能为负值的情况。
+					speed= speed > 0 ? Math.ceil(speed):Math.floor(speed);
+					if(attr ==='opacity'){
+						speed = speed>0 ? 0.1 : -0.1;
+					}
+
+					// 设置计算后的新的属性值
+					Node.style[attr] = current+speed+unit;
+
+
+					// 清除定时器的条件，保险起见写2个，2个意思一样的。				
+					if(speed==0 || current==target){
+						clearInterval(Node[timerName]);
+						Node.style[attr] = target+unit;
+						// 当所有动画完成后才执行回调函数
+						timerLen--			
+						if(typeof callback==='function'&&timerLen===0){
+							callback();
+						}						
+					}
+
+
+				},30)		
+			}
+
+		},
+
+		/**
+		 * [ajax请求]
+		 * @param  {[Object]} options [
+		 *                            	ajax({
+											url:'api/weibo_like.php',   //**必须写,要简单处理一下后面不要带有参数，避免出现2个city的情况
+											type:'get',					//可以不写。默认是get
+											async:true,					//可以不写。默认是ture
+											data:{id:1},				//可以不写。后端就不会根据此筛选数据
+											callback:function(res){		//**必须写，用于接受后端的返回值
+													//处理数据			//写的话要求属性名必须相同
+											}
+										})
+		  																
+		    							]
+		 * @return {[eachType]}     res    [以参数的形式传进回调函数中，已经经过JSON转换处理]
+		 */
+		ajax:function (options){
+
+			// 默认参数
+			var defaults = {
+				// 请求类型
+				type:'get',
+
+				// 是否异步
+				async:true
+			}
+
+			// 扩展默认参数
+			for(var attr in options){
+				defaults[attr] = options[attr];
+			}
+
+			var opt = defaults;
+
+
+			var xhr = null;
+
+			try{
+				xhr = new XMLHttpRequest();
+			}catch(error){
+				try{
+					xhr = new ActiveXObject("Msxml2.XMLHTTP");
+				}catch(err){
+					try{
+						xhr = new ActiveXObject("Microsoft.XMLHTTP");
+					}catch(e){
+						alert('你不适合浏览这个网站，请下载google浏览器')
 					}
 				}
+				
+			}
 
-				ele.style[attr] = current + speed + unit;
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)){
+					if(typeof opt.callback === 'function'){//[]{}
+						var res = xhr.responseText;
 
-			},30);
-		})(attr)
-	}
-}
-
-/**
- * [判断数据类型]
- * @param  {All} data [所有数据]
- * @return {String}      [返回数据类型对应的字符串]
- */
-function type(data){
-	// data.toString();
-	// "[object RegExp]"
-	// "[object Array]"
-	return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();//
-}
-// type(10);//'number'
-// type([10]);//'array'
+						// if(/^[\[\{}]/.test(xhr.responseText)){
+						// 	res = JSON.parse(xhr.responseText);
+						// }
 
 
-/**
- * 	
- * @param  {Object} options [请求的参数]
- */
-function ajax(options){
-	// 默认值
-	var defaults = {
-		type:'get',//get,post,jsonp
-		jsonpCallbackName:'callback',
-		// data:{}
-	}
+						// 自动转换json字符串
+						try{
+							res = JSON.parse(res);
+						}catch(err){
+							res = res;
+						}
 
-	// var opt = Object.assign({},defaults,options);
-	for(var attr in options){
-		defaults[attr] = options[attr];
-	}
-	var opt = defaults;
+						opt.callback(res);
+					}
+				}
+			}
 
-	// 重置大小写
-	opt.type = opt.type.toLowerCase();
+			// 处理数据
+			// {id:20,msg:'xx'} => 'id=20&msg=xx'
+			var params = '';
+			if(opt.data){
+				for(var attr in opt.data){
+					params += attr + '=' + opt.data[attr] + '&';
+				}
 
-	// opt.data:{pageNo:1,qyt:10} => pageNo=1&qty=10
-	if(opt.data){
-		var params = '';
-		for(var attr in opt.data){
-			params += attr + '=' + opt.data[attr] + '&'
-		}
+				// 去掉最后一个&
+				params = params.slice(0,-1);
+			}
+			
+			// 判断get/post请求，以便传递参数
+			if(opt.type === 'get'){
+				opt.url += '?' + params;
+			}
 
-		// 删除多余的&
-		params = params.slice(0,-1)
+			xhr.open(opt.type,opt.url,opt.async);
+
+			if(opt.type === 'post'){
+				xhr.setRequestHeader('content-type',"application/x-www-form-urlencoded");
+			}else{
+				params = null;
+			}
+
+			xhr.send(params);
+		},
+
+
+
+		/**
+		 * [判断数据类型]
+		 * @param  {[data]} data [各种需要判断的数据类型]
+		 * @return {[String]}      [判断结果]
+		 */
+		type:function (data){
+			// [object Object]
+			return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();
+		},
+		// type(123) => 'number'
+		// type({}) => 'object'
+		// type([]) => 'array'
+		// type(/aa/) => 'regexp'
 		
-	}
+		
+		/**
+		 * [blink description]
+		 * @param  {obj} obj [$实例]
+		 * @return {[type]}   [鼠标移上去有闪烁效果]
+		 */
+		blink:function(obj){
+			obj.mouseenter(function(){
+				
+				$(this).stop(true).animate({opacity:0.8}).animate({opacity:1})
+			})
+		},
 
-	if(opt.type === 'jsonp'){
-		// 预设全局函数
-		var fnName = 'getData' + Date.now();
-		window[fnName] = function(data){
-				typeof opt.success === 'function' && opt.success(data);
+		// 定时器
+		/**
+		 * [timer description]
+		 * @param  {[string]}   date ['2018-2-3 10:30:10']
+		 * @param  {Function} fn   [回调函数，传进一个参数为一个倒计时字符串]
+		 * @return {[type]}        [description]
+		 */
+		timer:function(date,fn){
+			var timer
+			time();
+			$(window).focus(function(){
+				time();
+			})
+			$(window).blur(function(){
+				clearInterval(timer)
+			})
+			function time(){
+				clearInterval(timer)
+				timer = setInterval(function(){
+					var setTime = Date.parse(date);
+					var now = Date.now();
+					var differ = setTime - now;
+					
+					if(differ <=0){
+						
+						clearInterval(timer);
+						days='00';
+						hours='00';
+						minutes='00';
+						deconds='00';
+						res = `${days}天${hours}时${minutes}分${seconds}秒`
+						return
+					}
+					// 得到相对与1970年1月1日8时的时间，减去8小时再减去1天
+					// 下面获取的日时分秒直接就是2个日子相差的时间。
+					differ =  new Date(differ-28800000-86400000)
+					
+					var days = differ.getDate()===31? 0 : differ.getDate();
+					var hours = differ.getHours();
+					var minutes = differ.getMinutes();
+					var seconds = differ.getSeconds();
 
-				// 移除script标签
-				document.body.removeChild(script);
-		}
+					days = ('' + days).length<2? '0'+days : days;
+					hours =( '' + hours).length<2? '0'+hours : hours;
+					minutes = ('' + minutes).length<2? '0'+minutes : minutes;
+					seconds =( '' + seconds).length<2? '0'+seconds : seconds;
+					
+					
+					res = `${days}天${hours}时${minutes}分${seconds}秒`
 
-		// 创建script标签
-		var script = document.createElement('script');
-
-		// 判断opt.url中是否存在?
-		opt.url += opt.url.indexOf('?')>=0 ? params : '?'+params;
-
-		script.src = opt.url + '&'+opt.jsonpCallbackName+'='+fnName;
-
-		// 把script标签写入页面
-		document.body.appendChild(script);
-		return;
-	}
-
-
-	var xhr = null;
-	try{
-		xhr = new XMLHttpRequest();
-	}catch(error){
-		try{
-			xhr = new ActiveXObject("Msxml2.XMLHTTP");
-		}catch(err){
-			try{
-				xhr = new ActiveXObject("Microsoft.XMLHTTP");
-			}catch(e){
-				 alert('你的浏览器太low了，这个世界不适合你');
+					
+					fn(res);
+				},1000)
+				
 			}
-		}
+			 
+		},
+
+		// timer('2017-6-12 9:10:30')
+		// return 02天12时30分30秒
 	}
-
-	// 返回数据
-	var status = [200,304];
-	xhr.onreadystatechange = function(){
-		if(xhr.readyState === 4 && status.indexOf(xhr.status)>=0){
-			var res = xhr.responseText;
-			try{
-				res = JSON.parse(res);
-			}catch(err){
-				res = res;
-			}
-
-			// if(typeof opt.success === 'function'){
-			// 	opt.success(res);
-			// }
-
-			typeof opt.success === 'function' && opt.success(res);
-		}
-	}
-
-	
-
-	if(opt.type === 'get'){
-		opt.url += opt.url.indexOf('?')>=0 ? params : '?'+params;
-		params = null;
-	}else if(opt.type === 'post'){
-		// 添加请求头
-		xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	}
-
-	xhr.open(opt.type,opt.url);
-	xhr.send(params);
-}
-
-ajax.get = function(options){
-	options.type = 'get';
-	this(options);
-}
-
-ajax.post = function(options){
-	options.type = 'post';
-	this(options);
-}
-
-ajax.jsonp = function(options){
-	options.type = 'jsonp';
-	this(options);
-}
-
-// ajax({
-// 	type:'get'
-// 	url:'http://localhost/api/football.php?pageNo=1',
-// 	data:{qyt:10},
-// 	jsonpCallbackName:'cb'
-// 	success:250
-// })
-// ajax.get()
+})

@@ -5,11 +5,12 @@ require.config({
 	// 别名/虚拟路径
 	paths:{
 		'jquery':'../lib/jquery-3.2.1',
-		
-		'carousel':'../lib/ft-carousel.min'
+		'carousel':'../lib/ft-carousel.min',
+		'common':'common'
 	},
 	shim:{
 		// 设置依赖
-		carousel:['jquery']
+		carousel:['jquery'],
+		common:['jquery']
 	}
 });
