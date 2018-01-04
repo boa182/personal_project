@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/*reg部分的样式*/
+a.blue_link {
+  color: #0083ce; }
+
+.container {
+  width: 998px; }
+
+#reg {
+  color: #5e5e5e; }
+  #reg .container {
+    position: relative;
+    background: url(http://s.maiyaole.com/images/passport/r_bg_02.png) no-repeat right bottom;
+    width: 998px;
+    min-height: 373px;
+    border: 1px solid #E6E6E6;
+    border-top: 2px solid #0083CE;
+    box-shadow: -1px 1px 10px #EFEFEF,-1px 10px 10px #EFEFEF;
+    padding-bottom: 20px; }
+    #reg .container .lg_title {
+      font: 20px "microsoft yahei";
+      margin: 13px 0;
+      padding-left: 50px;
+      padding-right: 18px; }
+      #reg .container .lg_title span {
+        float: right;
+        font-size: 12px;
+        margin-top: 7px; }
+    #reg .container .reg_form {
+      padding-left: 100px;
+      padding-top: 5px;
+      color: #5e5e5e; }
+      #reg .container .reg_form .reg_row {
+        min-height: 70px;
+        _height: 70px;
+        width: 342px;
+        position: relative;
+        z-index: 1; }
+        #reg .container .reg_form .reg_row span {
+          line-height: 24px;
+          color: #a5a5a5; }
+        #reg .container .reg_form .reg_row .checkbox {
+          display: block;
+          min-height: 20px;
+          margin-top: 0px;
+          margin-bottom: 6px;
+          padding-left: 20px;
+          vertical-align: middle; }
+          #reg .container .reg_form .reg_row .checkbox span {
+            margin-left: 10px;
+            font: 12px "Lucida Grande", tahoma, arial, 宋体; }
+        #reg .container .reg_form .reg_row .btn {
+          margin-top: 10px;
+          display: inline-block;
+          margin-bottom: 0;
+          font-weight: bold;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid transparent;
+          white-space: nowrap;
+          padding: 6px 12px;
+          font-size: 14px;
+          line-height: 1.428571429;
+          user-select: none;
+          background-color: #0099F1;
+          width: 340px;
+          border-bottom: #0083ce 2px solid;
+          color: #fff;
+          font: 16px "microsoft yahei";
+          border-radius: 1px; }
+        #reg .container .reg_form .reg_row .btn:hover {
+          text-decoration: none;
+          background-color: #0083ce; }
+        #reg .container .reg_form .reg_row .form-control {
+          display: block;
+          width: 286px;
+          height: 26px;
+          padding: 6px 12px 6px 40px;
+          font-size: 14px;
+          line-height: 1.428571429;
+          vertical-align: middle;
+          background-color: transparent;
+          border: 1px solid #e6e6e6; }
+        #reg .container .reg_form .reg_row .form-control[disabled],
+        #reg .container .reg_form .reg_row .form-control[readonly],
+        #reg .container .reg_form .reg_row fieldset[disabled] .form-control {
+          background-color: #f3f3f3;
+          cursor: not-allowed; }
+        #reg .container .reg_form .reg_row .empty {
+          border: #ffaa00 1px solid; }
+        #reg .container .reg_form .reg_row .error {
+          border: #e72418 1px solid; }
+        #reg .container .reg_form .reg_row .u_name {
+          background: url(http://s.maiyaole.com/images/passport/regest.png) no-repeat 0 0;
+          background-position: 8px -114px; }
+        #reg .container .reg_form .reg_row .u_ps {
+          background: url(http://s.maiyaole.com/images/passport/regest.png) no-repeat 0 0;
+          background-position: 8px -145px; }
+        #reg .container .reg_form .reg_row .i_empty,
+        #reg .container .reg_form .reg_row .i_true,
+        #reg .container .reg_form .reg_row .i_false {
+          display: none;
+          height: 16px;
+          width: auto;
+          float: right;
+          padding-right: 25px;
+          margin-top: -28px; }
+        #reg .container .reg_form .reg_row .i_true {
+          background: url(http://s.maiyaole.com/images/passport/regest.png) no-repeat 0 0;
+          background-position: right 2px; }
+        #reg .container .reg_form .reg_row .i_empty {
+          background: url(http://s.maiyaole.com/images/passport/regest.png) no-repeat 0 0;
+          background-position: right -57px; }
+      #reg .container .reg_form .pw .i_empty {
+        background: none;
+        color: red;
+        padding: 0;
+        margin: 0; }
+      #reg .container .reg_form .hz_login p {
+        margin-top: 10px;
+        line-height: 24px;
+        color: #5e5e5e; }
+      #reg .container .reg_form .hz_login a {
+        line-height: 24px;
+        color: #a5a5a5;
+        text-indent: -9999px; }
+      #reg .container .reg_form .hz_login .a_yhd,
+      #reg .container .reg_form .hz_login .a_zfb,
+      #reg .container .reg_form .hz_login .a_qq,
+      #reg .container .reg_form .hz_login .a_sina,
+      #reg .container .reg_form .hz_login .a_wlt,
+      #reg .container .reg_form .hz_login .a_wy {
+        background: url(http://s.maiyaole.com/images/201306/images/private/img_zhifu.png) no-repeat left top;
+        border: medium none;
+        display: block;
+        float: left;
+        height: 39px;
+        margin-right: 18px;
+        width: 39px; }
+      #reg .container .reg_form .hz_login a.a_yhd {
+        background-position: 0 0; }
+      #reg .container .reg_form .hz_login a.a_yhd:hover {
+        background-position: 0 -52px; }
+      #reg .container .reg_form .hz_login a.first {
+        padding-left: 0; }
+      #reg .container .reg_form .hz_login a.a_zfb {
+        background-position: -48px 0; }
+      #reg .container .reg_form .hz_login a.a_zfb:hover {
+        background-position: -48px -52px; }
+      #reg .container .reg_form .hz_login a.a_qq {
+        background-position: -95px 0; }
+      #reg .container .reg_form .hz_login a.a_qq:hover {
+        background-position: -95px -52px; }
+      #reg .container .reg_form .hz_login a.a_sina {
+        background-position: -143px 0; }
+      #reg .container .reg_form .hz_login a.a_sina:hover {
+        background-position: -143px -52px; }
+      #reg .container .reg_form .hz_login a.a_wlt {
+        background-position: -241px 0; }
+      #reg .container .reg_form .hz_login a.a_wlt:hover {
+        background-position: -241px -52px; }
+      #reg .container .reg_form .hz_login a.a_wy {
+        background-position: -191px 0; }
+      #reg .container .reg_form .hz_login a.a_wy:hover {
+        background-position: -191px -52px; }
+
+/*底部的样式*/
+#simplefooter {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+  #simplefooter .container {
+    text-align: center; }
+  #simplefooter p {
+    font-size: 12px;
+    margin-top: 10px; }
+    #simplefooter p a {
+      color: #666666;
+      margin: 0 8px; }
+    #simplefooter p a:hover {
+      color: #0083CE;
+      text-decoration: underline; }

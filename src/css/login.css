@@ -22,8 +22,8 @@
     .main .form_right #commonLogin {
       display: none; }
     .main .form_right .tab_con {
-      margin-left: 560px;
-      padding: 0 30px; }
+      margin-left: 592px;
+      padding: 0 84px; }
       .main .form_right .tab_con .lg_title {
         font-size: 16px;
         font: 20px "microsoft yahei";
@@ -106,6 +106,10 @@
 .tellnumber, .u_ps, .u_name, .u_email, .i_empty, .i_true, .i_false {
   background: url(../css/img/regest.png) no-repeat; }
 
+.i_empty {
+  color: yellow;
+  background-position: right -57px; }
+
 .u_name {
   background-position: 8px -114px; }
 
@@ -156,3 +160,14 @@
   color: #5CBAF0;
   background-color: #F1FAFF;
   vertical-align: middle; }
+
+#simplefooter {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+  #simplefooter .container {
+    text-align: center; }
+  #simplefooter p {
+    margin-top: 10px; }
+    #simplefooter p a {
+      color: #666666;
+      margin: 0 8px; }

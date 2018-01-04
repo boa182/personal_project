@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-	<meta charset="UTF-8" />
-	<title>注册</title>
-</head>
-<body>
-	
-</body>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/register.css" />
+	</head>
+
+	<body>
+		<div class="head">
+			<div class="container">
+				<a href="../index.html">
+					<img src="../css/img/yao_logo.png" />
+				</a>
+
+			</div>
+		</div>
+		<div id="reg">
+			<div class="container">
+				<h2 class="lg_title">
+					<span class="fr">我已经注册，现在就<a href="./login.html" class="blue_link">登录</a></span>Hi，欢迎注册！
+				</h2>
+				<div class="reg_form">
+					<div class="reg_row phone">
+						<input type="text" name="phone" placeholder="手机号" class="form-control  u_name"/>
+						<i class="i_true" id="email_true"></i>
+						<i class="i_empty" id="email_empty">不能为空</i>
+					</div>
+					<div class="reg_row pw">
+						<input type="password" name="regPassword" placeholder="登录密码" class="form-control u_ps pw1"/>
+						<i class="i_true" id="email_true"></i>
+						<span id="password_tip" style="display: none;">6-20位字符，建议由字母，数字和符号两种以上组合</span>
+						<i class="i_empty" id="email_empty">密码为空或位数太少</i>
+					</div>
+					<div class="reg_row">
+						<input type="password" name="regPassword2" id="regPassword2" placeholder="确认密码" class="form-control u_ps pw2" disabled="disabled"/>
+					</div>
+					<div class="reg_row">
+						<!-- 1药网协议-->
+						<label class="checkbox"><input value="1" id="xyCheckBox" checked="checked" type="checkbox"> <span class="two_week">我已阅读并同意 <a class="blue_link" onclick="window.open('http://www.111.com.cn/cms/view.do?topicId=22270','', 'width=600,height=600,scrollbars=1,resizable=yes')" href="javascript:void(0);">《1药网服务协议》</a>
+										</span><span class="error" style="display:none;" id="xyCheckBox_desc">请勾选1药网服务协议</span></label>
+						<button type="button" class="btn btn-primary" id="registerButton"><a href="./../index.html">立即注册</a></button>
+						<div></div>
+					</div>
+					<div class="reg_row hz_login">
+						<p>使用合作伙伴账号登录：</p>
+						<a class="first a_yhd" >1号店</a>
+						<a class="a_zfb" >支付宝</a>
+						<a class="a_qq" >QQ</a>
+						<a class="a_sina">新浪微博</a>
+						<a class="a_wlt">万里通</a>
+						<a class="last a_wy">网易</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="simplefooter">
+			<div class="container">
+				<p>
+					<a target="_blank" href="http://www.111.com.cn/cmsPage/2015012602/">关于1药网</a>|
+					<a href="http://www.111.com.cn/cmsPage/2013101402/" target="_blank" rel="nofollow">互联网药品交易资格证</a>|
+					<a href="http://www.111.com.cn/cmsPage/2013101401/" target="_blank" rel="nofollow">互联网药品信息服务资格证</a>|
+
+				</p>
+				<p>
+					<a rel="nofollow" href="http://www.111.com.cn/cmsPage/2014041703/" target="_blank">连锁营业执照</a>|
+					<a rel="nofollow" href="http://www.111.com.cn/cmsPage/2013101403/" target="_blank">保健食品卫生许可证</a>|
+					<a rel="nofollow" href="http://www.111.com.cn/cmsPage/2013101407/" target="_blank">医疗器械许可证</a>|
+					<a rel="nofollow" href="http://www.111.com.cn/cmsPage/2013101404/" target="_blank">食品流通许可证</a>|
+					<a rel="nofollow" href="http://www.111.com.cn/cmsPage/2013101408/" target="_blank">GSP证书</a>|
+					<a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">粤ICP备12015869号</a>
+				</p>
+				<p>
+					Copyright© 1药网 2010-2015， All Rights Reserved
+				</p>
+
+			</div>
+		</div>
+		<script src="../js/require.js" data-main = "../js/register"></script>
+	</body>
+
 </html>
