@@ -82,7 +82,14 @@ body {
 	min-width: 1349px;
 }
 
-
+body,
+button,
+input,
+select,
+textarea {
+	font: 12px tahoma, arial, "Microsoft Yahei", 宋体;
+	color: #5E5E5E;
+}
 /***********************************************************/
 
 

@@ -64,6 +64,31 @@
 
 
 /*nav的样式*/
+
+
+/*main部分，里面有手工琴还有列表项*/
+ #main{
+     .searchColSub{
+         width: 180px;
+         .itemChoose{
+             overflow: hidden;
+             margin: 10px 0 ;
+             border: 1px solid #DBDBDB;
+             border-top: 0;
+             h2{
+                 font-size: 14px;
+                 font-weight: bold;
+                 padding: 8px 12px 9px;
+                 background-color: #ddd;
+                 border-top: 1px solid #dbdbdb;
+                 a{
+                     color: #5E5E5E;
+                 }
+             }
+         }
+     }
+ }   
+    
 /*右边浮动盒子的样式*/
 #float_r_box {
     position: fixed;
