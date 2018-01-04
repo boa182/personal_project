@@ -76,8 +76,6 @@
           border-bottom: none;
           line-height: 32px;
           margin-top: 2px; }
-      #head .container ul.fr .menu .myyaowang:hover .menu_bd_panel {
-        display: block; }
       #head .container ul.fr .menu .PhoneApp:hover .menu_bd_app {
         display: block;
         background-color: #fff; }
@@ -366,5 +364,291 @@
     display: inline-block;
     width: 245px;
     height: 150px; }
+  #warp1 .wrapImg {
+    padding-top: 10px; }
 
 /*wrap样式，该死的闹钟*/
+#main .index_floor {
+  margin-top: 30px;
+  border: 1px solid #F3F3F3;
+  font-family: "Microsoft Yahei";
+  color: #5e5e5e;
+  width: 1189px;
+  height: 485px;
+  border-bottom: none; }
+  #main .index_floor .in_floor_l {
+    float: left;
+    width: 168px; }
+    #main .index_floor .in_floor_l .floor_name {
+      padding-left: 20px;
+      height: 85px;
+      line-height: 85px;
+      background: #F8F8F8;
+      font-size: 20px; }
+    #main .index_floor .in_floor_l li {
+      float: left;
+      width: 83px;
+      height: 49px;
+      border: 1px solid #F3F3F3;
+      border-left: none;
+      border-top: none;
+      text-align: center;
+      line-height: 49px;
+      font-size: 14px; }
+
+#main .index_floor.floor_1 {
+  border-top: 2px solid #92c4ff; }
+
+#main .index_floor.floor_2 {
+  border-top: 2px solid #ffa27a; }
+
+#main .index_floor.floor_3 {
+  border-top: 2px solid #ff6b6b; }
+
+#main .index_floor.floor_4 {
+  border-top: 2px solid #f6c89e; }
+
+#main .index_floor.floor_5 {
+  border-top: 2px solid #aee177; }
+
+#main .index_floor.floor_6 {
+  border-top: 2px solid #ffacd0; }
+
+#main .index_floor.floor_7 {
+  border-top: 2px solid #cac3f2; }
+
+#main .index_floor.floor_8 {
+  border-top: 2px solid #fcb0c0; }
+
+#main .index_floor.floor_9 {
+  border-top: 2px solid #cac4f2; }
+
+#main .index_floor.floor_10 {
+  border-top: 2px solid #16f0cf; }
+
+#main .in_floor_r {
+  float: right;
+  width: 1009px; }
+  #main .in_floor_r .example {
+    width: 600px;
+    height: 284px;
+    float: left; }
+  #main .in_floor_r .ft-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  #main .in_floor_r .ft-carousel .carousel-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%; }
+  #main .in_floor_r .ft-carousel .carousel-inner .carousel-item {
+    float: left;
+    height: 100%; }
+  #main .in_floor_r .ft-carousel .carousel-item img {
+    width: 100%; }
+  #main .in_floor_r .ft-carousel .carousel-indicators {
+    position: absolute;
+    left: 172px;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0; }
+  #main .in_floor_r .ft-carousel .carousel-indicators span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    margin: 0 4px;
+    border-radius: 50%;
+    cursor: pointer; }
+  #main .in_floor_r .ft-carousel .carousel-indicators span.active {
+    background-color: #de3a3a; }
+  #main .in_floor_r .ft-carousel .carousel-btn {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 45px;
+    margin-top: -25px;
+    cursor: pointer; }
+  #main .in_floor_r .spShow li {
+    float: left;
+    width: 198px;
+    padding: 20px 50px 10px 50px;
+    border-right: 1px solid #F3F3F3;
+    border-bottom: 1px solid #F3F3F3;
+    height: 193px; }
+    #main .in_floor_r .spShow li.last {
+      border-right: none; }
+  #main .in_floor_r .spShow .title {
+    font-size: 14px;
+    height: 20px;
+    text-align: center;
+    margin: 15px 0 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  #main .in_floor_r .spShow .price {
+    color: #e72418;
+    font-size: 16px;
+    text-align: center; }
+
+/*main各个楼层样式*/
+#link {
+  padding-top: 18px; }
+  #link .linkBox {
+    background: #F8F8F8;
+    border-bottom: 1px solid #E6E6E6; }
+    #link .linkBox li {
+      display: inline;
+      float: left;
+      width: 178px;
+      height: 33px;
+      border-right: 1px solid #E6E6E6;
+      font-size: 12px;
+      line-height: 33px;
+      text-align: center;
+      cursor: pointer; }
+    #link .linkBox li.cur {
+      background: #fff;
+      font-weight: 700;
+      height: 34px;
+      margin-bottom: -1px; }
+  #link .linkC {
+    border: 1px solid #E2E2E2;
+    border-top: 0 none; }
+  #link .fshop {
+    padding: 8px 0 15px 8px; }
+    #link .fshop a {
+      float: left;
+      display: block;
+      background: url(http://s.maiyaole.com/images/201306/images/img_btm_logo.png) no-repeat;
+      width: 110px;
+      height: 46px;
+      text-indent: -9999px;
+      margin: 7px 8px 0 0;
+      opacity: 0.7; }
+    #link .fshop a:hover {
+      opacity: 1; }
+    #link .fshop .btm_logo01 {
+      background-position: 0 top; }
+    #link .fshop .btm_logo02 {
+      background-position: -118px top; }
+    #link .fshop .btm_logo03 {
+      background-position: -236px top; }
+    #link .fshop .btm_logo04 {
+      background-position: -354px top; }
+    #link .fshop .btm_logo05 {
+      background-position: -472px top; }
+    #link .fshop .btm_logo06 {
+      background-position: -590px top; }
+    #link .fshop .btm_logo07 {
+      background-position: -708px top; }
+    #link .fshop .btm_logo08 {
+      background-position: -826px top; }
+    #link .fshop .btm_logo09 {
+      background-position: -944px top; }
+    #link .fshop .btm_logo10 {
+      background-position: -1062px top; }
+    #link .fshop .btm_logo11 {
+      background-position: -118px -53px; }
+    #link .fshop .btm_logo12 {
+      background-position: -236px -53px; }
+    #link .fshop .btm_logo15 {
+      background-position: -944px -53px; }
+  #link .friendly {
+    padding-top: 20px;
+    padding-left: 30px;
+    display: none;
+    height: 130px; }
+    #link .friendly a {
+      display: block;
+      width: 128px;
+      height: 26px;
+      float: left;
+      font-size: 12px;
+      color: #666;
+      margin: 0; }
+
+/* link部分的样式*/
+#commit {
+  height: 180px;
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  zoom: 1;
+  clear: both; }
+  #commit li {
+    color: #5e5e5e;
+    width: 250px;
+    float: left;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    margin: 20px 0 0 38px;
+    position: relative;
+    top: 0; }
+    #commit li p {
+      font-weight: bold;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #333333; }
+    #commit li .cirle {
+      color: #c7a774;
+      position: relative;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      border-radius: 50%;
+      border: 1px solid #C7A774;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 24px;
+      font-weight: 500;
+      padding: 0; }
+    #commit li span {
+      color: #8C8C8C; }
+
+/*commit部分的样式*/
+#app {
+  margin-bottom: 10px; }
+  #app li {
+    width: 343px;
+    height: 140px;
+    background: #f0f0f0;
+    float: left;
+    margin-left: 20px;
+    overflow: hidden; }
+  #app .nomargin {
+    margin: 0; }
+
+/*app的部分样式*/
+#foot .service_port {
+  width: 285px;
+  float: right;
+  border-left: 1px solid #eee;
+  text-align: center;
+  margin-top: 28px;
+  padding: 15px 0; }
+  #foot .service_port .tel {
+    font-size: 18px;
+    color: #c7a774;
+    font-weight: 700; }
+  #foot .service_port .service_time {
+    color: #999;
+    line-height: 18px;
+    padding-top: 8px; }
+
+#foot dl {
+  width: 130px;
+  margin: 28px 10px 0 4px;
+  float: left;
+  display: inline; }
+
+#foot .first_dl {
+  padding-left: 40px; }
+
+/*foot部分的样式*/
