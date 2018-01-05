@@ -7,12 +7,14 @@ require.config({
 		'jquery':'../lib/jquery-3.2.1',
 		'carousel':'../lib/ft-carousel.min',
 		'common':'common',
-		'base':'base'
+		'base':'base',
+		'ui':'../lib/jquery-ui/jquery-ui'
 	},
 	shim:{
 		// 设置依赖
 		carousel:['jquery'],
 		common:['jquery'],
-		base:['jquery']
+		base:['jquery'],
+		ui:['jquery']
 	}
 });
