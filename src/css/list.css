@@ -2,6 +2,8 @@
 #nav {
   color: #505050;
   font-size: 16px; }
+  #nav .container {
+    border-bottom: 2px solid #d2b994; }
   #nav .nav_1 li {
     float: left;
     height: 48px;
@@ -132,6 +134,60 @@
       border: 1px solid #DBDBDB;
       border-left: 0 none;
       border-right: 0 none; }
+  #main .searchColMain #goods ul {
+    position: relative; }
+    #main .searchColMain #goods ul li {
+      box-sizing: border-box;
+      float: left;
+      margin: 4px 6px 10px 0;
+      height: 380px;
+      position: relative;
+      width: 239px; }
+      #main .searchColMain #goods ul li img {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px; }
+      #main .searchColMain #goods ul li .price {
+        font-size: 16px;
+        font-weight: bold;
+        color: #FF0000;
+        position: relative;
+        padding: 5px 0;
+        margin-top: 5px;
+        text-align: center; }
+      #main .searchColMain #goods ul li .name {
+        color: #333333;
+        line-height: 20px;
+        text-align: center; }
+      #main .searchColMain #goods ul li .talk {
+        padding: 0 5px;
+        color: #5E5E5E; }
+        #main .searchColMain #goods ul li .talk i {
+          font-size: 16px;
+          color: red; }
+        #main .searchColMain #goods ul li .talk span {
+          font-weight: bold;
+          float: right; }
+      #main .searchColMain #goods ul li .smb {
+        padding: 0 10px;
+        margin-top: 10px; }
+        #main .searchColMain #goods ul li .smb div {
+          width: 20px;
+          height: 20px;
+          float: left;
+          border: 1px solid #CCCCCC;
+          text-align: center;
+          line-height: 20px;
+          cursor: pointer; }
+        #main .searchColMain #goods ul li .smb input {
+          float: left;
+          display: inline-block;
+          width: 20px;
+          height: 15px;
+          outline: none; }
+    #main .searchColMain #goods ul li:hover {
+      border: 3px solid #DBDBDB; }
 
 /*右边浮动盒子的样式*/
 #float_r_box {

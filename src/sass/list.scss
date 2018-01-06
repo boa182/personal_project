@@ -1,4 +1,7 @@
 #nav {
+    .container{
+        border-bottom: 2px solid #d2b994;
+    }
     color: #505050;
     font-size: 16px;
     .nav_1 {
@@ -168,6 +171,74 @@
                 border: 1px solid #DBDBDB;
                 border-left:0 none ;
                 border-right: 0 none;
+            }
+        }
+        #goods{
+            ul{
+               position: relative;
+                li{
+                    box-sizing: border-box;
+                    float: left;
+                    margin: 4px 6px 10px 0;
+                    height: 380px;
+                    position: relative;
+                    width: 239px;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                        width: 200px;
+                        height: 200px;
+                    }
+                    .price{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #FF0000;
+                        position: relative;
+                        padding: 5px 0;
+                        margin-top: 5px;
+                        text-align: center;
+                    }
+                    .name{
+                        color: #333333;
+                        line-height: 20px;
+                        text-align: center;
+                    }
+                    .talk{
+                        padding:0 5px ;
+                        color: #5E5E5E;
+                        i{
+                            font-size: 16px;
+                            color: red;
+                        }
+                        span{
+                            font-weight: bold;
+                            float: right;
+                        }
+                    }
+                    .smb{
+                        padding:0 10px;
+                        margin-top: 10px;
+                        div{
+                            width: 20px;
+                            height: 20px;
+                            float: left;
+                            border: 1px solid #CCCCCC;
+                            text-align: center;
+                            line-height: 20px;
+                            cursor: pointer;
+                        }
+                        input{
+                            float: left;
+                            display: inline-block;
+                            width: 20px;
+                            height: 15px;
+                            outline: none;
+                        }
+                    }
+                }
+                li:hover{
+                    border: 3px solid #DBDBDB;
+                }
             }
         }
     }
