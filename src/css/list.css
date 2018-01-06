@@ -188,6 +188,20 @@
           outline: none; }
     #main .searchColMain #goods ul li:hover {
       border: 3px solid #DBDBDB; }
+  #main .searchColMain #pageBox {
+    float: left;
+    margin: 10px 170px;
+    cursor: pointer; }
+    #main .searchColMain #pageBox span {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #DBDBDB;
+      font-weight: bold;
+      line-height: 30px;
+      text-align: center; }
+    #main .searchColMain #pageBox span.active {
+      background-color: #C0C0C0; }
 
 /*右边浮动盒子的样式*/
 #float_r_box {

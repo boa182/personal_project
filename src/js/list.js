@@ -14,9 +14,18 @@ require(['config'], function() {
 					$(this).find('i').html('+');
 				}else{
 					$(this).addClass('show').next('ul').slideDown();
-					$(this).find('i').html('——');
+					$(this).find('i').html('—');
 					
 				}
+			});
+			
+		})();
+		//底部导航点击
+		(function(){
+			var $page = $('#pageBox');
+			$page.on('click','span',function(){
+				$(this).addClass('active').siblings().removeClass('active');
+				console.log(this);
 			});
 			
 		})();
@@ -57,8 +66,12 @@ require(['config'], function() {
 							</li>`
 			}).join("");
 			goods.appendChild(ul);
+			var $ul = $('#goods ul');
+			$ul.on('click','li',function(){
+				location.href = './../html/datalist.html'
+			});
 			
-			console.log(JSON.stringify(goodsArr));
+			
 		})();
 	});
 	
