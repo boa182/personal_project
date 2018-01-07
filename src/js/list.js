@@ -1,6 +1,9 @@
 require(['config'], function() {
 	require(['jquery', 'carousel', 'common', 'base'], function($, slided, com,base) {
-		base.headHover();
+		$('#head').load('./baseHead.html',function(){
+			
+			base.headHover();
+		});
 		base.backTop();
 		base.nav2();
 		base.cirle();
@@ -52,13 +55,13 @@ require(['config'], function() {
 								<p class="name">${item.name}</p>
 								<p class="talk"><i class="iconfont icon-dianzan"></i>1药网自营 <span>评价（${item.talk}）</span></p>
 								<div class="smb">
-									<div>
+									<div class="push">
 										+
 									</div>
 									<div>
 										<input type="text" value="1"/>
 									</div>
-									<div>
+									<div class="cut">
 										-
 									</div>
 									<button class="fr"><i class="iconfont icon-gouwuche"></i>加入购物车</button>
@@ -67,9 +70,55 @@ require(['config'], function() {
 			}).join("");
 			goods.appendChild(ul);
 			var $ul = $('#goods ul');
-			$ul.on('click','li',function(){
+			$ul.on('click','img',function(){
 				location.href = './../html/datalist.html'
 			});
+			
+			$('.push').on('click',function(){
+				$(this).siblings().find('input').val(function(num,num2){
+					console.log(num,num2);
+					return num2*1+1;
+				});
+			});
+			$('.cut').on('click',function(){
+				$(this).siblings().find('input').val(function(idex,num2){
+					if(num2>0){
+						return num2*1-1;
+						
+					}else{
+						return 0;
+					}
+				});
+			});
+			//购物车特效，很炫很酷
+			$ul.on('click','button',function(){
+				var $currentLi = $(this).closest('li');
+				var $img = $currentLi.children('img');
+				var $copyImg = $img.clone();
+				var $buyCar = $('.buyCarLink');
+				$('.carcount').html(function(a,b){
+					console.log(a,b);
+					return b*1+1;
+				});
+				
+				$copyImg.css({
+					position:'absolute',
+					left:$img.offset().left,
+					top:$img.offset().top,
+					width:$img.width()
+				});
+				$copyImg.appendTo('body');
+				
+				$copyImg.animate({
+					left:$buyCar.offset().left+100,
+					top:$buyCar.offset().top,
+					width:50
+				},'slow',function(){
+					$copyImg.remove();
+				});
+				
+			});
+			
 			
 			
 		})();

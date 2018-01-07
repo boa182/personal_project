@@ -11,7 +11,10 @@ require(['config'],function(){
 		//		})
 		//	})();
 		//头部的hover
-		base.headHover();
+		$('#head').load('./html/baseHead.html',function(){
+			
+			base.headHover();
+		});
 		//返顶效果
 		base.backTop();
 		//nav2的动画hover

@@ -183,7 +183,14 @@
                     height: 380px;
                     position: relative;
                     width: 239px;
+                    button{
+                        background-color:#0099f1;  
+                        border: 1px solid #0099f1;
+                        color: #fff;
+                        padding: 5px;
+                    }
                     img{
+                        position: relative;
                         display: block;
                         margin: 0 auto;
                         width: 200px;
@@ -259,6 +266,7 @@
                 
             }
         }
+        
     }
 }
 

@@ -8,13 +8,15 @@ require.config({
 		'carousel':'../lib/ft-carousel.min',
 		'common':'common',
 		'base':'base',
-		'ui':'../lib/jquery-ui/jquery-ui'
+		'ui':'../lib/jquery-ui/jquery-ui',
+		'zoom':'../lib/magnifier'
 	},
 	shim:{
 		// 设置依赖
 		carousel:['jquery'],
 		common:['jquery'],
 		base:['jquery'],
-		ui:['jquery']
+		ui:['jquery'],
+		zoom:['jquery']
 	}
 });

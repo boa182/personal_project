@@ -1,0 +1,21 @@
+#title .fr {
+  overflow: hidden;
+  margin: 40px 0; }
+  #title .fr li {
+    line-height: 32px;
+    float: left;
+    height: 32px;
+    width: 180px;
+    font-size: 12px;
+    color: #C0C0C0;
+    text-align: center;
+    background: #f3f3f3 url(http://s.maiyaole.com/images/cart/followstep.png) no-repeat right top; }
+  #title .fr .current {
+    display: inline-block;
+    background-color: #0083ce;
+    color: #fff;
+    font-weight: bold; }
+  #title .fr .last {
+    background-image: none; }
+
+/**/

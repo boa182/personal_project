@@ -2,7 +2,10 @@ define(['jquery', 'common'], function($, com) {
 	return {
 		headHover: function() {
 			var $menu = $('.menu');
-
+			var $userProvince = $('#user_province');
+			$('#headerAllProvince').on('click','a',function(){
+				$userProvince.html($(this).html());
+			});
 			$menu.on('mouseenter', function() {
 				$(this).find('i').removeClass('icon-arrow2-bottom').addClass('icon-jiantou-copy');
 
