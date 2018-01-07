@@ -6,7 +6,7 @@
 	$id = isset($_GET['id'])? $_GET['id']:'';
 
 	// 编写服务器查询语句
-	$sql = "select * from goods where id='$id'";
+	$sql = "select * from goodlists where gid='$id'";
 
 	// 新建查询,获取查询结果
 	$res = $conn->query($sql)->fetch_all(MYSQLI_ASSOC);

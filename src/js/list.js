@@ -108,6 +108,7 @@ require(['config'], function() {
 						});
 						//购物车特效，很炫很酷
 						$ul.on('click', 'button', function() {
+							
 							var $currentLi = $(this).closest('li');
 							var $img = $currentLi.children('img');
 							var $copyImg = $img.clone();
@@ -123,8 +124,9 @@ require(['config'], function() {
 									// 如果有相同项，就把相同项删除
 									if(cookieArr[cookieArr.length - 1].id == cookieArr[i].id) {
 										cookieArr.pop();
-										cookieArr[cookieArr.length-1].qty++;
-										return
+										cookieArr[i].qty++;
+										break
+										
 									}
 
 								}

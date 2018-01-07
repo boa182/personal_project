@@ -23,12 +23,20 @@
 
 	// 如果返回的结果为空，即用户名没有被注册，则写入数据。
 	if(!$res){
-	$sql2 =  "insert into reg (username,password)values('$username','$password')";
-	$conn->query($sql2);
-	echo "注册成功";
+	echo "该用户名还没有注册";
 
 	}else{
-		echo '用户名已注册';
+		$sql2 =  "select * from reg where username='$username' and password='$password'";
+
+		$res2 =$conn->query($sql2)->fetch_all(MYSQLI_ASSOC);
+
+		if(!$res2){
+			echo "密码错误";
+		}else{
+			echo "登录成功";
+		}
+
+
 	}
 
 

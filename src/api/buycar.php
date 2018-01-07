@@ -14,7 +14,7 @@
 
 	
 	// // 编写SQL语句
-	$sql = "select * from goods where id in".$a;
+	$sql = "select * from goodlists where id in".$a;
 
 	// 新建查询
 	$res = $conn->query($sql);
