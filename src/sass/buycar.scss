@@ -31,4 +31,35 @@
         color: #0083CE;
         border-bottom: 3px solid #0083CE;
     }
+    .nothing{
+        height: 200px;
+        padding: 60px 0px 0px 300px;
+    }
+    .inner{
+        display: none;
+        table{
+            border: 1px solid #DBDBDB;
+            th{
+                background-color: #ccc;
+                color: #fff;
+                font-weight: bold;
+            }
+            td,th{
+                border: 1px solid #DBDBDB;
+                padding: 12px 25px;
+                input{
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                }
+               .del{
+                   display: block;
+               }
+               button{
+                   width: 40px;
+                   height: 20px;
+               }
+            }
+        }
+    }
 }

@@ -19,3 +19,32 @@
     background-image: none; }
 
 /**/
+#main h2 {
+  font-size: 24px;
+  color: #0083CE;
+  border-bottom: 3px solid #0083CE; }
+
+#main .nothing {
+  height: 200px;
+  padding: 60px 0px 0px 300px; }
+
+#main .inner {
+  display: none; }
+  #main .inner table {
+    border: 1px solid #DBDBDB; }
+    #main .inner table th {
+      background-color: #ccc;
+      color: #fff;
+      font-weight: bold; }
+    #main .inner table td, #main .inner table th {
+      border: 1px solid #DBDBDB;
+      padding: 12px 25px; }
+      #main .inner table td input, #main .inner table th input {
+        display: inline-block;
+        width: 20px;
+        height: 20px; }
+      #main .inner table td .del, #main .inner table th .del {
+        display: block; }
+      #main .inner table td button, #main .inner table th button {
+        width: 40px;
+        height: 20px; }
