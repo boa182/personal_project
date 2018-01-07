@@ -105,6 +105,13 @@ define(['jquery', 'common'], function($, com) {
 				})
 			})();
 		},
+		setCookie:function(name,data){
+			var now = new Date();
+			var expires = now.setFullYear(now.getFullYear()+1000);
+			expires = new Date(expires);
+
+			com.setCookie(name,JSON.stringify(data),expires,'/')
+		}
 		
 		
 

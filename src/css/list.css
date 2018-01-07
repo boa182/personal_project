@@ -140,7 +140,7 @@
       box-sizing: border-box;
       float: left;
       margin: 4px 6px 10px 0;
-      height: 380px;
+      height: 400px;
       position: relative;
       width: 239px; }
       #main .searchColMain #goods ul li button {
@@ -196,7 +196,7 @@
       border: 3px solid #DBDBDB; }
   #main .searchColMain #pageBox {
     float: left;
-    margin: 10px 170px;
+    margin: 10px -20px;
     cursor: pointer; }
     #main .searchColMain #pageBox span {
       display: inline-block;
@@ -207,7 +207,9 @@
       line-height: 30px;
       text-align: center; }
     #main .searchColMain #pageBox span.active {
-      background-color: #C0C0C0; }
+      background-color: #0083ce;
+      color: #fff;
+      font-weight: bold; }
 
 /*右边浮动盒子的样式*/
 #float_r_box {

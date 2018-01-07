@@ -787,3 +787,47 @@
     }
 }
 /*******************************************浮动盒子的样式**********************************************/
+#LoutiNav{
+    border: 1px solid gray;
+    position: fixed;
+    top: 150px;
+    left: 30px;
+    display: none;
+    li{
+        width: 47px;
+        height: 32px;
+        border-bottom: 1px solid gray;
+        text-align: center;
+        cursor: pointer;
+        span{
+            display: none;
+        }
+        
+    }
+    li:hover{
+        
+        i{
+            display: none;
+        }
+        span{
+            display: block;
+            font-size: 12px;
+            background: #157CDB;
+            color: white;
+        }
+    }
+    .active{
+        background: #157CDB;
+        color: white;
+        i{
+            display: none;
+        }
+        span{
+            display: block;
+            font-size: 12px;
+            background: #157CDB;
+            color: white;
+        }
+    }
+    
+}

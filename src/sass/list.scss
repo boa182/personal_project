@@ -180,7 +180,7 @@
                     box-sizing: border-box;
                     float: left;
                     margin: 4px 6px 10px 0;
-                    height: 380px;
+                    height: 400px;
                     position: relative;
                     width: 239px;
                     button{
@@ -250,7 +250,7 @@
         }
         #pageBox{
             float: left;
-            margin: 10px 170px;
+            margin: 10px -20px;
             cursor: pointer;
             span{
                 display: inline-block;
@@ -262,7 +262,9 @@
                 text-align: center;
             }
             span.active{
-                background-color: #C0C0C0;
+                background-color: #0083ce;
+                color: #fff;
+                font-weight: bold;
                 
             }
         }

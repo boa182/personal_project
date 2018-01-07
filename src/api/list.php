@@ -6,25 +6,27 @@
 	$qty = isset($_GET['qty']) ? $_GET['qty'] : 10;
 
 	// SQL语句
-	$sql = "select * from goods limit ".($page-1)*$qty .",".$qty;
+	$sql = "select * from goodlists ";
+	
+	$sql .= ' limit '. $qty*($page-1) . ',' . $qty;
 
-	// 获取查询结果
-	$res = $conn->query($sql);
-
-	// 使用查询结果集
-	$rows = $res->fetch_all(MYSQLI_ASSOC);
-
-	// 格式化数据
-    $result = array(
-    	'pageNo'=>$page,
+	//获取查询结果
+	$result = $conn->query($sql);
+	//使用查询结果集
+	$row = $result->fetch_all(MYSQLI_ASSOC);
+	//释放查询结果集
+	$result->close();
+	
+	 // 格式化数据
+    $res = array(
+    	'page'=>$page,
     	'qty'=>$qty,
-    	'total'=>$conn->query('select count(*) from goods')->fetch_row()[0],
-    	'data'=>$rows,
+    	'total'=>$conn->query('select count(*) from goodlists')->fetch_row()[0],
+    	'data'=>$row,
     );
-    // 输出，用json字符串做一下中介
-	echo json_encode($result,JSON_UNESCAPED_UNICODE);
-
-
-	//关闭连接
+	
+	//把结果输出到前台
+	echo json_encode($res,JSON_UNESCAPED_UNICODE);
+	
 	$conn->close();
 ?>

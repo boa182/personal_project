@@ -5,7 +5,7 @@
 	$username = 'root';
 	$password = '';
 	// 数据库名
-	$database = 'projectsql';
+	$database = 'yyw';
 
 	//连接数据库
 	$conn = new mysqli($servername,$username,$password,$database);
