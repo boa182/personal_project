@@ -171,3 +171,13 @@
     #simplefooter p a {
       color: #666666;
       margin: 0 8px; }
+
+#vcd_tatus {
+  display: inline-block;
+  background-color: #0083CE;
+  font-weight: bold;
+  color: #fff;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px; }

@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['common','jquery'],function(){
+	require(['common','jquery'],function(com, $){
 		
 		//1、用户名手机号码验证
 		(function(){
